@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center text-center justify-center sm:justify-start"
+      className="min-h-screen flex flex-col items-center text-center justify-center sm:justify-start"
     >
       <figure>
         <img
@@ -13,7 +13,7 @@ export default function Hero() {
           className="w-[328px] sm:w-auto"
         />
       </figure>
-      <h1 className="font-tnr font-bold text-4xl sm:text-6xl tracking-wide">
+      <h1 className="font-tnr font-bold text-4xl sm:text-6xl sm:tracking-wide">
         Fachry D. Afriza
       </h1>
       <span className="text-accent text-xs sm:text-base block sm:mt-2">

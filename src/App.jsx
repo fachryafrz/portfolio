@@ -1,4 +1,6 @@
-import Hero from "./components/Hero";
+import About from "./components/sections/About";
+import Hero from "./components/sections/Hero";
+import Projects from "./components/sections/Projects";
 import Socials from "./components/Socials";
 
 function App() {
@@ -13,9 +15,12 @@ function App() {
       {/* Main Contents */}
       <main className="bg-bg text-white font-fira-code px-4">
         <Hero />
-        <Socials />
+        <About />
+        <Projects />
       </main>
       {/* Main Contents */}
+
+      <Socials />
     </>
   );
 }

@@ -12,6 +12,9 @@ export default {
         "fira-code": ["Fira Code"],
         tnr: ["Times New Roman", "Times", "serif"],
       },
+      boxShadow: {
+        primary: "4px 4px 0 0 rgba(193,139,115,1)",
+      },
     },
   },
   plugins: [

@@ -7,7 +7,7 @@
     @apply pointer-events-none;
   }
 
-  section {
-    @apply min-h-screen;
+  .btn-primary {
+    @apply flex items-center justify-center text-accent gap-2 bg-bg rounded-lg text-xs border border-accent max-w-fit py-4 px-5 transition-all ease-linear hover:-translate-x-1 hover:-translate-y-1 hover:shadow-primary focus:outline-none focus:-translate-x-1 focus:-translate-y-1 focus:shadow-primary;
   }
 }
