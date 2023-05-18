@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-[425px] sm:max-w-6xl mx-auto py-8 min-h-screen flex flex-col gap-2 items-center"
+      className="max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto py-8 min-h-screen flex flex-col gap-2 items-center"
     >
       <div className="flex w-full items-center gap-2 before:hidden md:before:block before:w-full before:h-[1px] before:bg-accent before:opacity-50 after:w-full after:h-[1px] after:bg-accent after:opacity-50">
         <h2 className="flex gap-2 font-bold whitespace-nowrap before:content-['02.'] before:text-accent md:text-2xl">
@@ -42,7 +42,9 @@ export default function Projects() {
                   >
                     {item.name}
                   </h3>
-                  <p className="text-desc text-xs">{item.description}</p>
+                  <p className="text-desc text-xs sm:text-sm">
+                    {item.description}
+                  </p>
                 </div>
               </article>
             );

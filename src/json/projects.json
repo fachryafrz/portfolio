@@ -45,14 +45,14 @@
     "name": "Popcorn Vision",
     "type": "Web_App",
     "img_path": "/projects/popcorn-vision.png",
-    "description": "Popcorn Vision is a website designed for movie and TV enthusiasts to easily access information on their favorite films and shows. The site features detailed information on a wide range of titles, including synopses, cast and crew information, and reviews. Users can also search for specific titles. With its user-friendly interface and comprehensive database, Popcorn Vision is the perfect resource for anyone looking to explore the world of movies and television.",
+    "description": "Your go-to website for movie and TV info. Explore a wide range of titles, with detailed synopses, cast and crew info, and reviews. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.    ",
     "url": "https://popcornvision.vercel.app"
   },
   {
     "name": "Rhythmic",
     "type": "Web_App",
     "img_path": "/projects/rhythmic.png",
-    "description": "Rhythmic is a music streaming platform that lets users listen to a vast library of songs, create personalized playlists, and discover new music. With its intuitive and modern interface, Rhythmic provides an immersive music experience for users to enjoy their favorite tunes and explore new tracks. Whether you're in the mood for upbeat beats or calming melodies, Rhythmic has a diverse selection of music genres to choose from.",
+    "description": "Rhythmic is a music streaming platform with a vast library of songs, personalized playlists, and discovery features. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat beats to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
     "url": "https://rhythmic.vercel.app"
   }
 ]

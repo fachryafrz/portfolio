@@ -5,7 +5,7 @@ import * as Icons from "ionicons/icons";
 
 export default function About() {
   return (
-    <section className="max-w-[425px] sm:max-w-6xl mx-auto py-8 flex flex-col sm:flex-row gap-4">
+    <section className="max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto py-8 flex flex-col sm:flex-row gap-4">
       <div className="sm:order-2 md:w-[70%]">
         <div className="sticky top-4 flex flex-col gap-2 ">
           <div className="flex items-center gap-2 after:w-full after:h-[1px] after:bg-accent after:opacity-50">
