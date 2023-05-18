@@ -35,11 +35,11 @@ export default function AllProjects() {
                   <span className="text-accent text-xs sm:text-sm font-medium">
                     {item.type}
                   </span>
-                  <h2 className="font-bold text-base sm:text-2xl">
+                  <h2 className="font-bold text-base lg:text-xl">
                     {item.name}
                   </h2>
                   {item.description !== null && (
-                    <p className="hidden lg:block text-sm text-desc mt-2">
+                    <p className="hidden xl:block text-sm text-desc mt-2">
                       {item.description}
                     </p>
                   )}
