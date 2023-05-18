@@ -1,7 +1,21 @@
+import Hero from "./components/Hero";
+import Socials from "./components/Socials";
+
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      {/* Navbar */}
+      <header>
+        <nav></nav>
+      </header>
+      {/* Navbar */}
+
+      {/* Main Contents */}
+      <main className="bg-bg text-white font-fira-code px-4">
+        <Hero />
+        <Socials />
+      </main>
+      {/* Main Contents */}
     </>
   );
 }

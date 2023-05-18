@@ -3,4 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+  img {
+    @apply pointer-events-none;
+  }
+
+  section {
+    @apply min-h-screen;
+  }
 }
