@@ -31,7 +31,7 @@ export default function Projects() {
                   />
                   <a
                     href={item.url}
-                    className="opacity-0 flex bg-accent text-bg rounded-full p-4 w-fit h-fit z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 before:inset-0 before:absolute before:w-full before:h-full before:scale-125 before:border-2 before:border-dashed before:rounded-full before:border-accent hover:before:scale-150 before:transition-all hover:before:rotate-180"
+                    className="opacity-0 flex bg-accent text-bg rounded-full p-4 w-fit h-fit z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 before:inset-0 before:absolute before:w-full before:h-full before:scale-125 before:border before:border-dashed before:rounded-full before:border-accent hover:before:scale-150 before:transition-all hover:before:rotate-180"
                   >
                     <IonIcon icon={Icons.openOutline} />
                   </a>
