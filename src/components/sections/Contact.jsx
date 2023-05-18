@@ -25,7 +25,9 @@ export default function Contact() {
         <h2 className="before:content-['03.'] flex gap-2 items-center before:text-accent text-sm">
           Let&apos;s connect!
         </h2>
-        <h3 className="text-6xl font-bold text-accent">Get in touch</h3>
+        <h3 className="text-3xl sm:text-6xl font-bold text-accent">
+          Get in touch
+        </h3>
         <p className="text-desc text-xs max-w-[500px]">
           Ready to bring your project to life? Let&apos;s connect and discuss
           your vision. With my experience in UI/UX design and web development, I
