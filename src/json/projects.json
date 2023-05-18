@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Rekrut",
+    "type": "Web App",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Belgie Pro",
+    "type": "Landing Page",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "British Propolis",
+    "type": "Landing Page",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Koperasi Simpan Pinjam",
+    "type": "Web App",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Jobtastic",
+    "type": "Web App",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Maze Group Indonesia",
+    "type": "Company Profile",
+    "description": "",
+    "url": ""
+  },
+  {
+    "name": "Popcorn Vision",
+    "type": "Web App",
+    "description": "Popcorn Vision is a website designed for movie and TV enthusiasts to easily access information on their favorite films and shows. The site features detailed information on a wide range of titles, including synopses, cast and crew information, and reviews. Users can also search for specific titles. With its user-friendly interface and comprehensive database, Popcorn Vision is the perfect resource for anyone looking to explore the world of movies and television.",
+    "url": "https://popcornvision.vercel.app"
+  },
+  {
+    "name": "Rhythmic",
+    "type": "Web App",
+    "description": "Rhythmic is a music streaming platform that lets users listen to a vast library of songs, create personalized playlists, and discover new music. With its intuitive and modern interface, Rhythmic provides an immersive music experience for users to enjoy their favorite tunes and explore new tracks. Whether you're in the mood for upbeat beats or calming melodies, Rhythmic has a diverse selection of music genres to choose from.",
+    "url": "https://rhythmic.vercel.app"
+  }
+]

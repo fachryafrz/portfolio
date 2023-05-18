@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Github",
+    "url": "https://github.com/fachryafrz",
+    "icon": "logoGithub"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/fachryafrz",
+    "icon": "logoInstagram"
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/fachryafrz",
+    "icon": "logoTwitter"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://linkedin.com/in/fachryafrz",
+    "icon": "logoLinkedIn"
+  }
+]
