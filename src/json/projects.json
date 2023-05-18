@@ -1,56 +1,56 @@
 [
   {
     "name": "Rekrut",
-    "type": "Web_App",
+    "type": "Web App",
     "img_path": "/projects/rekrut.png",
-    "description": "Rekrut is a user-friendly website that showcases available job vacancies. With Rekrut, you can easily search for job opportunities based on your desired location and preferred salary range. Additionally, companies can register and post their job openings, connecting them with qualified candidates. Whether you're a job seeker looking for the perfect position or a company seeking talented individuals, Rekrut provides a seamless platform to bridge the gap between employers and job seekers.",
+    "description": "Rekrut is a user-friendly job website where you can find job vacancies based on location and salary preferences. Companies can post openings and connect with qualified candidates. It's a seamless platform bridging employers and job seekers.",
     "url": "https://fachryafrz.github.io/WP1-Rekrut/"
   },
   {
     "name": "Belgie Pro",
-    "type": "Landing_Page",
+    "type": "Landing Page",
     "img_path": "/projects/belgie-pro.png",
-    "description": "Belgie Pro presents an exclusive collection of top-tier facial medicine products through its captivating landing page. Discover a range of meticulously curated skincare solutions designed to nourish, rejuvenate, and enhance your skin's natural beauty. Each product description offers detailed insights into the ingredients, benefits, and application methods, empowering you to make informed choices for your skincare regimen. With Belgie Pro, you can elevate your skincare routine to new heights, embracing a radiant and healthy complexion. Explore the exquisite world of facial medicine products and unlock the secret to timeless beauty with Belgie Pro.",
+    "description": null,
     "url": "https://fachryafrz.github.io/Effy-BelgiePro/"
   },
   {
     "name": "British Propolis",
-    "type": "Landing_Page",
+    "type": "Landing Page",
     "img_path": "/projects/british-propolis.png",
-    "description": "Introducing British Propolis, your trusted ally in maintaining stamina and overall body health. Our carefully crafted products harness the natural power of propolis, a resinous substance renowned for its numerous health benefits. By incorporating British Propolis into your daily routine, you can support your immune system, enhance vitality, and promote overall well-being. With a commitment to quality and sustainability, British Propolis offers premium supplements that are meticulously sourced and processed. Experience the transformative potential of propolis and unlock a healthier, more energetic you with British Propolis.",
+    "description": null,
     "url": "https://fachryafrz.github.io/Effy-BritishPropolis/"
   },
   {
     "name": "Koperasi Simpan Pinjam",
-    "type": "Web_App",
+    "type": "Web App",
     "img_path": "/projects/ksp.png",
-    "description": "Koperasi Simpan Pinjam is a powerful web application designed to streamline and manage the financial operations of a savings and loan cooperative. With this user-friendly platform, cooperative members can easily access and track their savings, loan transactions, and repayments. The app provides comprehensive features for managing member accounts, generating reports, and facilitating seamless communication between members and administrators. Simplify financial management, enhance transparency, and foster efficient cooperative operations with Koperasi Simpan Pinjam. Empower your cooperative members to achieve their financial goals while ensuring the smooth functioning of the cooperative's financial ecosystem.",
-    "url": ""
+    "description": "Koperasi Simpan Pinjam is a powerful web application that streamlines financial operations for savings and loan cooperatives. Members can easily access and track savings, loans, and repayments. The app offers features for managing accounts, generating reports, and facilitating communication. Simplify financial management, enhance transparency, and foster efficient cooperative operations with Koperasi Simpan Pinjam.",
+    "url": null
   },
   {
     "name": "Jobtastic",
-    "type": "Web_App",
+    "type": "Web App",
     "img_path": "/projects/jobtastic.png",
-    "description": "Introducing Jobtastic, a visually appealing website that revolutionizes the job search experience. With Jobtastic, you can explore a wide range of job vacancies tailored to your desired location and salary preferences. The platform also empowers companies to effortlessly post job openings and connect with qualified candidates. Featuring a stunning user interface, Jobtastic offers an immersive and intuitive browsing experience for both job seekers and employers. Get ready to embark on a seamless journey towards finding your dream job or discovering exceptional talent with Jobtastic.",
-    "url": ""
+    "description": "Jobtastic is a visually appealing website that revolutionizes job searching. Explore tailored job vacancies, and companies can effortlessly post openings and connect with qualified candidates. With its stunning user interface, Jobtastic provides an immersive experience for both job seekers and employers. Find your dream job or exceptional talent with Jobtastic.",
+    "url": null
   },
   {
     "name": "Maze Group Indonesia",
-    "type": "Company_Profile",
+    "type": "Company Profile",
     "img_path": "/projects/maze-group.png",
-    "description": "Discover Maze Group Indonesia, a prominent film production company, through their captivating company profile site. Immerse yourself in their world of storytelling as you explore their impressive portfolio of engaging and inspiring films. Created by a talented team, Maze Group Indonesia is dedicated to delivering high-quality cinematic experiences. Take a glimpse into their accomplishments, their passionate team, and their upcoming projects. Embark on a journey through their site and witness the power of their storytelling prowess as they continue to make a mark in the film industry.",
-    "url": ""
+    "description": null,
+    "url": null
   },
   {
     "name": "Popcorn Vision",
-    "type": "Web_App",
+    "type": "Web App",
     "img_path": "/projects/popcorn-vision.png",
     "description": "Your go-to website for movie and TV info. Explore a wide range of titles, with detailed synopses, cast and crew info, and reviews. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.    ",
     "url": "https://popcornvision.vercel.app"
   },
   {
     "name": "Rhythmic",
-    "type": "Web_App",
+    "type": "Web App",
     "img_path": "/projects/rhythmic.png",
     "description": "Rhythmic is a music streaming platform with a vast library of songs, personalized playlists, and discovery features. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat beats to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
     "url": "https://rhythmic.vercel.app"

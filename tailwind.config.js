@@ -22,6 +22,7 @@ export default {
   },
   plugins: [
     require("autoprefixer"),
+    require("@tailwindcss/line-clamp"),
     require("tailwindcss-writing-mode")({
       variants: ["responsive", "hover"],
     }),

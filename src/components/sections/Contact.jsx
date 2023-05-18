@@ -28,7 +28,7 @@ export default function Contact() {
         <h3 className="text-3xl sm:text-6xl font-bold text-accent">
           Get in touch
         </h3>
-        <p className="text-desc text-xs max-w-[500px]">
+        <p className="text-desc text-xs sm:text-sm max-w-[500px]">
           Ready to bring your project to life? Let&apos;s connect and discuss
           your vision. With my experience in UI/UX design and web development, I
           can help you turn your ideas into reality. Don&apos;t hesitate,

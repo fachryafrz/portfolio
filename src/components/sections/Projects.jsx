@@ -2,6 +2,8 @@ import { IonIcon } from "@ionic/react";
 import * as Icons from "ionicons/icons";
 import projects from "../../json/projects.json";
 
+import { Link } from "react-router-dom";
+
 export default function Projects() {
   return (
     <section
@@ -23,25 +25,30 @@ export default function Projects() {
                 key={index}
                 className="text-center flex flex-col md:flex-row md:text-start md:items-center gap-4"
               >
-                <figure className="featured-projects min-w-[50%] rounded-lg overflow-hidden relative hover:after:backdrop-blur after:transition-all after:z-10 after:absolute after:w-full after:h-full after:top-0 after:left-0">
+                <figure className="featured-projects min-w-[50%] rounded-lg overflow-hidden relative hover:after:backdrop-blur-sm after:transition-all after:z-10 after:absolute after:inset-0">
                   <img
                     src={item.img_path}
                     alt={item.name}
                     className="pointer-events-auto transition-all ease-linear"
                   />
-                  <a
-                    href={item.url}
-                    className="opacity-0 flex bg-accent text-bg rounded-full p-4 w-fit h-fit z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 before:inset-0 before:absolute before:w-full before:h-full before:scale-125 before:border before:border-dashed before:rounded-full before:border-accent hover:before:scale-150 before:transition-all hover:before:rotate-180"
+                  <Link
+                    to={item.url}
+                    className="opacity-0 flex bg-accent text-bg rounded-full p-4 w-fit h-fit z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 before:inset-0 before:absolute before:w-full before:h-full before:scale-125 before:border before:border-dashed before:rounded-full before:border-accent hover:before:scale-150 before:transition-all hover:before:rotate-180 focus:outline-none focus:opacity-100"
                   >
                     <IonIcon icon={Icons.openOutline} />
-                  </a>
+                  </Link>
                 </figure>
                 <div className="flex flex-col gap-4">
-                  <h3
-                    className={`flex flex-col font-bold before:block before:text-accent before:content-["${item.type}"] before:text-xs sm:before:text-sm before:font-medium text-2xl md:text-3xl`}
-                  >
-                    {item.name}
-                  </h3>
+                  <div>
+                    <span className="text-accent text-xs sm:text-sm font-medium">
+                      {item.type}
+                    </span>
+                    <h3
+                      className={`flex flex-col font-bold before:block before:text-accent text-2xl md:text-3xl`}
+                    >
+                      {item.name}
+                    </h3>
+                  </div>
                   <p className="text-desc text-xs sm:text-sm">
                     {item.description}
                   </p>
@@ -50,9 +57,9 @@ export default function Projects() {
             );
           })}
       </div>
-      <a href="#!" className="btn-primary mt-8">
+      <Link to="/projects" className="btn-primary mt-8">
         View all
-      </a>
+      </Link>
     </section>
   );
 }

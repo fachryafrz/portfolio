@@ -18,4 +18,8 @@
   .featured-projects:hover a {
     @apply opacity-100 transition-all;
   }
+
+  .all-projects:hover .project-info {
+    @apply opacity-100;
+  }
 }
