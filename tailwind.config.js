@@ -3,9 +3,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "375px",
+      },
       colors: {
-        bg: "rgba(26,26,26,1)",
-        accent: "rgba(193,139,115,1)",
+        bg: "rgb(26,26,26)",
+        accent: "rgb(193,139,115)",
         desc: "rgba(255,255,255,0.5)",
       },
       fontFamily: {

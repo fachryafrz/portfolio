@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
 import Hero from "./components/sections/Hero";
@@ -8,8 +9,8 @@ function App() {
   return (
     <>
       {/* Navbar */}
-      <header>
-        <nav></nav>
+      <header className="font-fira-code text-xs xs:text-sm z-50 text-white text-opacity-50 fixed top-0 inset-x-0 w-full">
+        <Navbar />
       </header>
       {/* Navbar */}
 

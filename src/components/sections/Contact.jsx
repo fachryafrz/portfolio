@@ -17,7 +17,10 @@ export default function Contact() {
   }, []);
 
   return (
-    <section className="min-h-screen max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center justify-center gap-8">
+    <section
+      id="contact"
+      className="min-h-screen max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center justify-center gap-8"
+    >
       <div className="text-center flex flex-col items-center gap-4">
         <h2 className="before:content-['03.'] flex gap-2 items-center before:text-accent text-sm">
           Let&apos;s connect!
