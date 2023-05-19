@@ -13,7 +13,7 @@ export default function AllProjects() {
     <section className="max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col gap-4 lg:gap-8 py-16 items-center lg:items-start">
       <Link
         to={`/`}
-        className="hidden sm:flex items-center gap-4 text-center [&_ion-icon]:hover:-translate-x-2 [&_*]:transition-all hover:text-accent justify-center lg:justify-start w-fit -ml-8 focus:text-accent focus-within:outline-0 [&_ion-icon]:focus:-translate-x-2"
+        className="flex text-sm sm:text-base items-center gap-4 text-center [&_ion-icon]:hover:-translate-x-2 [&_*]:transition-all hover:text-accent justify-center lg:justify-start w-fit -ml-8 focus:text-accent focus-within:outline-0 [&_ion-icon]:focus:-translate-x-2"
       >
         <IonIcon icon={Icons.returnUpBackOutline} />
         Go back
