@@ -2,57 +2,73 @@
   {
     "name": "Rekrut",
     "type": "Web App",
+    "date": "2021-06-13",
     "img_path": "/projects/rekrut.png",
     "description": "Rekrut is a user-friendly job website where you can find job vacancies based on location and salary preferences. Companies can post openings and connect with qualified candidates. It's a seamless platform bridging employers and job seekers.",
-    "url": "https://fachryafrz.github.io/WP1-Rekrut/"
+    "url": "https://fachryafrz.github.io/WP1-Rekrut/",
+    "tech": ["HTML", "CSS", "JavaScript"]
   },
   {
     "name": "Belgie Pro",
     "type": "Landing Page",
+    "date": "2021-10-14",
     "img_path": "/projects/belgie-pro.png",
     "description": null,
-    "url": "https://fachryafrz.github.io/Effy-BelgiePro/"
+    "url": "https://fachryafrz.github.io/Effy-BelgiePro/",
+    "tech": ["HTML", "CSS", "JavaScript"]
   },
   {
     "name": "British Propolis",
     "type": "Landing Page",
+    "date": "2022-01-01",
     "img_path": "/projects/british-propolis.png",
     "description": null,
-    "url": "https://fachryafrz.github.io/Effy-BritishPropolis/"
+    "url": "https://fachryafrz.github.io/Effy-BritishPropolis/",
+    "tech": ["HTML", "CSS", "JavaScript"]
   },
   {
     "name": "Koperasi Simpan Pinjam",
     "type": "Web App",
+    "date": "2022-06-12",
     "img_path": "/projects/ksp.png",
     "description": "Koperasi Simpan Pinjam is a powerful web application that streamlines financial operations for savings and loan cooperatives. Members can easily access and track savings, loans, and repayments. The app offers features for managing accounts, generating reports, and facilitating communication. Simplify financial management, enhance transparency, and foster efficient cooperative operations with Koperasi Simpan Pinjam.",
-    "url": null
+    "url": null,
+    "tech": ["HTML", "CSS", "JavaScript", "CodeIgniter"]
   },
   {
     "name": "Jobtastic",
     "type": "Web App",
+    "date": "2022-06-18",
     "img_path": "/projects/jobtastic.png",
     "description": "Jobtastic is a visually appealing website that revolutionizes job searching. Explore tailored job vacancies, and companies can effortlessly post openings and connect with qualified candidates. With its stunning user interface, Jobtastic provides an immersive experience for both job seekers and employers. Find your dream job or exceptional talent with Jobtastic.",
-    "url": null
+    "url": null,
+    "tech": ["CodeIgniter", "Bootstrap"]
   },
   {
     "name": "Maze Group Indonesia",
     "type": "Company Profile",
+    "date": "2022-07-07",
     "img_path": "/projects/maze-group.png",
     "description": null,
-    "url": null
+    "url": null,
+    "tech": ["Laravel", "TailwindCSS", "NodeJS", "ViteJS"]
   },
   {
     "name": "Popcorn Vision",
     "type": "Web App",
+    "date": "2023-02-17",
     "img_path": "/projects/popcorn-vision.png",
-    "description": "Your go-to website for movie and TV info. Explore a wide range of titles, with detailed synopses, cast and crew info, and reviews. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.    ",
-    "url": "https://popcornvision.vercel.app"
+    "description": "Your go-to website for movies and TV shows details. Explore a wide range of titles, with detailed synopses, cast and crew info, and reviews. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.    ",
+    "url": "https://popcornvision.vercel.app",
+    "tech": ["ReactJS", "TailwindCSS", "NodeJS", "ViteJS"]
   },
   {
     "name": "Rhythmic",
     "type": "Web App",
+    "date": "2023-02-28",
     "img_path": "/projects/rhythmic.png",
-    "description": "Rhythmic is a music streaming platform with a vast library of songs, personalized playlists, and discovery features. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat beats to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
-    "url": "https://rhythmic.vercel.app"
+    "description": "Rhythmic is a Non-Copyright music streaming platform. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat beats to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
+    "url": "https://rhythmic.vercel.app",
+    "tech": ["ReactJS", "TailwindCSS", "NodeJS", "ViteJS"]
   }
 ]

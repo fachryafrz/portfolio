@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="flex items-center py-6 justify-center gap-4 sm:gap-12 bg-bg bg-opacity-95 backdrop-blur-sm">
+    <nav className="flex items-center py-6 justify-center gap-4 sm:gap-12 bg-bg bg-opacity-90 backdrop-blur-sm">
       <a
         href="#about"
         className="flex items-center gap-1 before:content-['01.'] before:text-accent hover:text-white transition-all focus:outline-none focus:text-white"

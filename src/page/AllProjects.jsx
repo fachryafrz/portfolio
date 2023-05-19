@@ -1,9 +1,14 @@
 import { IonIcon } from "@ionic/react";
 import * as Icons from "ionicons/icons";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import projects from "../json/projects.json";
 
 export default function AllProjects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col gap-4 lg:gap-8 py-16 items-center lg:items-start">
       <Link
@@ -23,6 +28,15 @@ export default function AllProjects() {
           .slice()
           .reverse()
           .map((item, index) => {
+            const dateStr = item.date;
+            const date = new Date(dateStr);
+            const options = {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            };
+            const formattedDate = date.toLocaleString("en-US", options);
+
             return (
               <article
                 key={index}
@@ -31,18 +45,31 @@ export default function AllProjects() {
                 <figure className="rounded-lg overflow-hidden relative">
                   <img src={item.img_path} alt={item.name} />
                 </figure>
-                <div className="absolute inset-0 p-4 flex flex-col justify-end backdrop-blur-sm bg-gradient-to-t from-black opacity-0 hover:opacity-100 transition-all ease-linear before:absolute before:inset-0 before:bg-gradient-to-t before:from-black before:to-black before:opacity-70 before:-z-10">
+                <div className="absolute inset-0 p-4 flex flex-col justify-end backdrop-blur-sm bg-gradient-to-t from-black opacity-0 hover:opacity-100 transition-all ease-linear before:absolute before:inset-0 before:bg-gradient-to-t before:from-black before:to-black before:opacity-90 before:-z-10">
                   <span className="text-accent text-xs sm:text-sm font-medium">
                     {item.type}
                   </span>
                   <h2 className="font-bold text-base lg:text-xl">
                     {item.name}
                   </h2>
-                  {item.description !== null && (
+                  {/* {item.description !== null && (
                     <p className="hidden xl:block text-sm text-desc mt-2">
                       {item.description}
                     </p>
-                  )}
+                  )} */}
+                  <div className="flex gap-2 items-center mt-4">
+                    {item.tech.map((tech, index) => {
+                      return (
+                        <figure key={index} className="w-[25px]">
+                          <img
+                            src={`/tech/${tech}.png`}
+                            alt={tech}
+                            className="w-full"
+                          />
+                        </figure>
+                      );
+                    })}
+                  </div>
                   {item.url !== null && (
                     <a
                       href={item.url}
@@ -53,6 +80,13 @@ export default function AllProjects() {
                       <IonIcon icon={Icons.openOutline} />
                     </a>
                   )}
+                  <span className="text-desc text-xs sm:text-sm flex items-start gap-2 absolute top-4 left-4">
+                    <IonIcon
+                      icon={Icons.calendarOutline}
+                      className="text-base sm:text-lg"
+                    />{" "}
+                    {formattedDate}
+                  </span>
                 </div>
               </article>
             );
