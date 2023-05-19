@@ -25,7 +25,9 @@ export default function Socials() {
             <a
               key={index}
               href={item.url}
+              target="_blank"
               className="flex hover:-translate-y-1 hover:text-white transition-all"
+              rel="noreferrer"
             >
               <IonIcon icon={icons[index]} />
             </a>
@@ -35,7 +37,9 @@ export default function Socials() {
       <div className="flex flex-col items-center after:h-[90px] after:w-[1px] after:bg-accent text-accent gap-8 px-2 pointer-events-auto">
         <a
           href={`mailto:${personal.email}`}
+          target="_blank"
           className="flex writing-mode-vertical-lr hover:-translate-y-1 hover:text-white transition-all text-sm tracking-wider font-fira-code"
+          rel="noreferrer"
         >
           {personal.email}
         </a>
