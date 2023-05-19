@@ -22,4 +22,8 @@
   .all-projects:hover .project-info {
     @apply opacity-100;
   }
+
+  .open-project:has(> a:focus) {
+    @apply opacity-100;
+  }
 }

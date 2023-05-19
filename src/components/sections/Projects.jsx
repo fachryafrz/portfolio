@@ -25,20 +25,22 @@ export default function Projects() {
                 key={index}
                 className="text-center flex flex-col md:flex-row md:text-start md:items-center gap-4"
               >
-                <figure className="featured-projects min-w-[50%] rounded-lg overflow-hidden relative hover:after:backdrop-blur-sm after:transition-all after:z-10 after:absolute after:inset-0">
+                <figure className="featured-projects min-w-[50%] rounded-lg overflow-hidden relative">
                   <img
                     src={item.img_path}
                     alt={item.name}
                     className="pointer-events-auto transition-all ease-linear"
                   />
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    className="opacity-0 flex bg-accent text-bg rounded-full p-4 w-fit h-fit z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 before:inset-0 before:absolute before:w-full before:h-full before:scale-125 before:border before:border-dashed before:rounded-full before:border-accent hover:before:scale-150 before:transition-all hover:before:rotate-180 focus:outline-none focus:opacity-100"
-                    rel="noreferrer"
-                  >
-                    <IonIcon icon={Icons.openOutline} />
-                  </a>
+                  <div className="open-project absolute inset-0 grid place-items-center backdrop-blur-sm opacity-0 hover:opacity-100 transition-all ease-linear">
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      className="flex bg-accent text-bg rounded-full p-4 w-fit h-fit relative before:absolute before:inset-0 before:w-full before:h-full before:scale-125 before:border before:border-dashed before:border-accent before:rounded-full hover:before:scale-150 hover:before:rotate-180 before:transition-all before:ease-linear focus:outline-0 focus:before:scale-150 focus:before:rotate-180"
+                      rel="noreferrer"
+                    >
+                      <IonIcon icon={Icons.openOutline} />
+                    </a>
+                  </div>
                 </figure>
                 <div className="flex flex-col gap-4">
                   <div>
