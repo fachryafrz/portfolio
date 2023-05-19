@@ -57,7 +57,7 @@ export default function AllProjects() {
                       {item.description}
                     </p>
                   )} */}
-                  <div className="flex gap-2 items-center mt-4">
+                  <div className="flex gap-2 items-center mt-2">
                     {item.tech.map((tech, index) => {
                       return (
                         <figure key={index} className="w-[25px]">
