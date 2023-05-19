@@ -4,6 +4,11 @@ import { IonIcon } from "@ionic/react";
 import * as Icons from "ionicons/icons";
 
 export default function About() {
+  const startedYear = 2020;
+  const currentYear = new Date().getFullYear();
+
+  const yearsExperience = currentYear - startedYear;
+
   return (
     <section
       id="about"
@@ -16,10 +21,25 @@ export default function About() {
               About me
             </h2>
           </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: personal.description }}
-            className="text-desc text-xs sm:text-sm"
-          ></div>
+          <div className="text-desc text-xs sm:text-sm">
+            <p>
+              Hi there! My name is Fachry Dwi Afriza, and I&apos;m a UI/UX
+              Designer & Full-Stack Developer with over {yearsExperience} years
+              of experience. I started my career in mid 2020, and since then, I
+              have been passionate about creating amazing web application with
+              the best user experience. My skillset includes ReactJS, Flutter,
+              Laravel, which are all modern and widely-used frameworks for
+              building fast and responsive applications.
+            </p>
+            <br />
+            <p>
+              My goal as a web developer is to create innovative and intuitive
+              web solutions that cater to the needs of my clients. I believe
+              that every project is unique and requires a personalized approach,
+              which is why I always strive to understand the client&apos;s
+              vision and provide solutions that exceed their expectations.
+            </p>
+          </div>
           {personal.resume !== null && (
             <a
               href={personal.resume}

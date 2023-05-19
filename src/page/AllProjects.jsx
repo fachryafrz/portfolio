@@ -64,7 +64,8 @@ export default function AllProjects() {
                           <img
                             src={`/tech/${tech}.png`}
                             alt={tech}
-                            className="w-full"
+                            className="w-full pointer-events-auto"
+                            title={tech}
                           />
                         </figure>
                       );

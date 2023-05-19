@@ -1,6 +1,7 @@
 import { IonIcon } from "@ionic/react";
 import * as Icons from "ionicons/icons";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import personal from "../../json/personal.json";
 import socials from "../../json/socials.json";
@@ -19,7 +20,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center justify-center gap-8"
+      className="min-h-screen max-w-[425px] sm:max-w-4xl xl:max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 relative"
     >
       <div className="text-center flex flex-col items-center gap-4">
         <h2 className="before:content-['03.'] flex gap-2 items-center before:text-accent text-sm">
@@ -44,13 +45,22 @@ export default function Contact() {
             <a
               key={index}
               href={item.url}
+              target="_blank"
               className="text-accent flex hover:-translate-y-1 hover:text-white transition-all text-2xl"
+              rel="noreferrer"
             >
               <IonIcon icon={icons[index]} />
             </a>
           );
         })}
       </div>
+      <footer className="absolute bottom-8 text-xs text-desc text-center [&_a]:text-accent [&_a]:font-medium hover:[&_a]:text-white [&_a]:transition-all [&_a]:ease-linear">
+        Design heavily inspired by{" "}
+        <a href="https://brittanychiang.com" target="_blank" rel="noreferrer">
+          Brittany Chiang
+        </a>{" "}
+        <br />& Built by <Link to="/">{personal.name}</Link>
+      </footer>
     </section>
   );
 }
