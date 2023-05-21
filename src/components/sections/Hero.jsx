@@ -1,4 +1,6 @@
+import { motion as m } from "framer-motion";
 import heroImg from "/fachry.png";
+import personal from "../../json/personal.json";
 
 export default function Hero() {
   return (
@@ -6,16 +8,34 @@ export default function Hero() {
       id="hero"
       className="min-h-screen relative flex flex-col items-center text-center justify-center -mt-8"
     >
-      <figure>
-        <img
+      <figure className="w-[328px] sm:w-auto aspect-square overflow-hidden">
+        <m.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           src={heroImg}
-          alt="Fachry Dwi Afriza"
+          alt={personal.name}
           className="w-[328px] sm:w-auto"
         />
       </figure>
-      <h1 className="font-tnr font-bold text-4xl flex flex-col items-center gap-2 sm:text-6xl sm:tracking-wide after:content-['UI/UX_Designer,_Full-Stack_Developer'] after:text-xs after:font-fira-code after:text-accent sm:after:text-base after:font-medium">
-        Fachry D. Afriza
-      </h1>
+      <div className="overflow-hidden">
+        <m.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25, delay: 1.25 }}
+          className="font-tnr font-bold text-4xl flex flex-col items-center gap-2 sm:text-6xl sm:tracking-wide"
+        >
+          Fachry D. Afriza
+        </m.h1>
+      </div>
+      <m.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 1.5 }}
+        className="mt-2 text-xs font-fira-code text-accent sm:text-base font-medium"
+      >
+        UI/UX Designer, Full-Stack Developer
+      </m.span>
     </section>
   );
 }

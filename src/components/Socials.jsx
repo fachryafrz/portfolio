@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 // JSON
 import socials from "../json/socials.json";
 import personal from "../json/personal.json";
+import { motion as m } from "framer-motion";
 
 export default function Socials() {
   const [icons, setIcons] = useState([]);
@@ -18,7 +19,12 @@ export default function Socials() {
   }, []);
 
   return (
-    <div className="hidden fixed bottom-0 left-1/2 -translate-x-1/2 lg:flex justify-between w-full max-w-7xl pointer-events-none">
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.25, delay: 1.75 }}
+      className="hidden fixed bottom-0 left-1/2 -translate-x-1/2 lg:flex justify-between w-full max-w-7xl pointer-events-none"
+    >
       <div className="flex flex-col items-center justify-between text-accent text-2xl after:h-[90px] after:w-[1px] after:bg-accent px-2 pointer-events-auto">
         {socials.map((item, index) => {
           return (
@@ -44,6 +50,6 @@ export default function Socials() {
           {personal.email}
         </a>
       </div>
-    </div>
+    </m.div>
   );
 }
