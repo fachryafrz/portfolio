@@ -18,16 +18,14 @@ export default function Hero() {
           className="w-[328px] sm:w-auto"
         />
       </figure>
-      <div className="overflow-hidden">
-        <m.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25, delay: 1.25 }}
-          className="font-tnr font-bold text-4xl flex flex-col items-center gap-2 sm:text-6xl sm:tracking-wide"
-        >
-          Fachry D. Afriza
-        </m.h1>
-      </div>
+      <m.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.25, delay: 1.25 }}
+        className="font-tnr font-bold text-4xl flex flex-col items-center gap-2 sm:text-6xl sm:tracking-wide"
+      >
+        Fachry D. Afriza
+      </m.h1>
       <m.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
