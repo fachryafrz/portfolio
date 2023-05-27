@@ -32,7 +32,7 @@ export default function Socials() {
               key={index}
               href={item.url}
               target="_blank"
-              className="flex hover:-translate-y-1 hover:text-white transition-all"
+              className="flex hover:-translate-y-1 hover:text-white transition-all focus:outline-0 focus:-translate-y-1 focus:text-white"
               rel="noreferrer"
             >
               <IonIcon icon={icons[index]} />
@@ -44,7 +44,7 @@ export default function Socials() {
         <a
           href={`mailto:${personal.email}`}
           target="_blank"
-          className="flex writing-mode-vertical-lr hover:-translate-y-1 hover:text-white transition-all text-sm tracking-wider font-fira-code"
+          className="flex writing-mode-vertical-lr hover:-translate-y-1 hover:text-white transition-all text-sm tracking-wider font-fira-code focus:outline-0 focus:-translate-y-1 focus:text-white"
           rel="noreferrer"
         >
           {personal.email}

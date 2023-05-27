@@ -66,7 +66,7 @@ export default function Contact() {
           );
         })}
       </div>
-      <footer className="absolute bottom-8 text-xs text-desc text-center [&_a]:text-accent [&_a]:font-medium hover:[&_a]:text-white [&_a]:transition-all [&_a]:ease-linear">
+      <footer className="absolute bottom-8 text-xs text-desc text-center [&_a]:text-accent [&_a]:font-medium hover:[&_a]:text-white [&_a]:transition-all [&_a]:ease-linear [&_a]:outline-0 focus:[&_a]:text-white">
         <m.div
           initial={{ opacity: 0, y: "20px" }}
           whileInView={{ opacity: 1, y: 0 }}
