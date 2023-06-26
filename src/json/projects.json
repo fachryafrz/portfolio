@@ -59,7 +59,7 @@
     "date": "2023-02-17",
     "img_path": "/projects/popcorn-vision.png",
     "description": "Your go-to website for movies and TV shows info. Explore a wide range of titles, with detailed synopses, reviews, cast and crew info. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.    ",
-    "url": "https://popcorn.vision",
+    "url": "https://www.popcorn.vision",
     "tech": ["ReactJS", "TailwindCSS", "NodeJS", "ViteJS"]
   },
   {
