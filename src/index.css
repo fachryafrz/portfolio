@@ -24,6 +24,6 @@
   }
 
   .open-project:has(> a:focus) {
-    @apply opacity-100;
+    @apply opacity-100 backdrop-blur;
   }
 }

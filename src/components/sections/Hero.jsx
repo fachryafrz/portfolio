@@ -32,7 +32,7 @@ export default function Hero() {
         transition={{ duration: 0.25, delay: 1.5 }}
         className="mt-2 text-xs font-fira-code text-accent sm:text-base font-medium"
       >
-        UI/UX Designer, Full-Stack Developer
+        UI/UX Designer, Front-End Developer
       </m.span>
     </section>
   );

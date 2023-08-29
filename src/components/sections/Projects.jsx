@@ -18,9 +18,9 @@ export default function Projects() {
           </h2>
         </Reveal>
       </div>
-      <div className="flex flex-col gap-6 mt-2 md:last:[&_article]:flex-row-reverse md:last:[&_article]:text-end">
+      <div className="flex flex-col gap-6 mt-2 md:even:[&_article]:flex-row-reverse md:even:[&_article]:text-end">
         {projects
-          .slice(-2)
+          .slice(-3)
           .reverse()
           .map((item, index) => {
             return (

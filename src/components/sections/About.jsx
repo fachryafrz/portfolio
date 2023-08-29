@@ -27,13 +27,16 @@ export default function About() {
           <Reveal>
             <div className="text-desc text-xs sm:text-sm">
               <p>
-                Hi there! My name is Fachry Dwi Afriza, and I&apos;m a UI/UX
-                Designer & Full-Stack Developer with over {yearsExperience}{" "}
-                years of experience. I started my career in mid 2020, and since
-                then, I have been passionate about creating amazing web
-                application with the best user experience. My skillset includes
-                ReactJS, Flutter, Laravel, which are all modern and widely-used
-                frameworks for building fast and responsive applications.
+                Hi there! My name is Fachry Dwi Afriza, and I&apos;m a{" "}
+                <span className={`text-accent font-medium`}>
+                  Front-End Web Developer
+                </span>{" "}
+                with over {yearsExperience} years of experience. I started my
+                career in mid 2020, and since then, I have been passionate about
+                creating amazing web application with the best user experience.
+                My skillset includes ReactJS, Flutter, Laravel, which are all
+                modern and widely-used frameworks for building fast and
+                responsive applications.
               </p>
               <br />
               <p>

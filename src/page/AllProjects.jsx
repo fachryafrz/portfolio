@@ -59,11 +59,11 @@ export default function AllProjects() {
                   <h2 className="font-bold text-base lg:text-xl">
                     {item.name}
                   </h2>
-                  {/* {item.description !== null && (
-                    <p className="hidden xl:block text-sm text-desc mt-2">
+                  {item.description !== null && (
+                    <p className="hidden xl:block text-xs text-desc mt-2">
                       {item.description}
                     </p>
-                  )} */}
+                  )}
                   <div className="flex gap-2 items-center mt-2">
                     {item.tech.map((tech, index) => {
                       return (
