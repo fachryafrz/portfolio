@@ -6,7 +6,8 @@
     "img_path": "/projects/rekrut.png",
     "description": "Rekrut is a user-friendly job website where you can find job vacancies based on location and salary preferences. Companies can post openings and connect with qualified candidates. It's a seamless platform bridging employers and job seekers.",
     "url": "https://fachryafrz.github.io/WP1-Rekrut/",
-    "tech": ["HTML", "CSS", "JavaScript"]
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "highlighted": false
   },
   {
     "name": "Belgie Pro",
@@ -15,7 +16,8 @@
     "img_path": "/projects/belgie-pro.png",
     "description": null,
     "url": "https://fachryafrz.github.io/Effy-BelgiePro/",
-    "tech": ["HTML", "CSS", "JavaScript"]
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "highlighted": false
   },
   {
     "name": "British Propolis",
@@ -24,7 +26,8 @@
     "img_path": "/projects/british-propolis.png",
     "description": null,
     "url": "https://fachryafrz.github.io/Effy-BritishPropolis/",
-    "tech": ["HTML", "CSS", "JavaScript"]
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "highlighted": false
   },
   {
     "name": "Koperasi Simpan Pinjam",
@@ -33,7 +36,8 @@
     "img_path": "/projects/ksp.png",
     "description": "Koperasi Simpan Pinjam is a powerful web application that streamlines financial operations for savings and loan cooperatives. Members can easily access and track savings, loans, and repayments. The app offers features for managing accounts, generating reports, and facilitating communication. Simplify financial management, enhance transparency, and foster efficient cooperative operations with Koperasi Simpan Pinjam.",
     "url": null,
-    "tech": ["HTML", "CSS", "JavaScript", "CodeIgniter"]
+    "tech": ["HTML", "CSS", "JavaScript", "CodeIgniter"],
+    "highlighted": false
   },
   {
     "name": "Jobtastic",
@@ -42,7 +46,8 @@
     "img_path": "/projects/jobtastic.png",
     "description": "Jobtastic is a visually appealing website that revolutionizes job searching. Explore tailored job vacancies, and companies can effortlessly post openings and connect with qualified candidates. With its stunning user interface, Jobtastic provides an immersive experience for both job seekers and employers. Find your dream job or exceptional talent with Jobtastic.",
     "url": null,
-    "tech": ["CodeIgniter", "Bootstrap"]
+    "tech": ["CodeIgniter", "Bootstrap"],
+    "highlighted": false
   },
   {
     "name": "Maze Group Indonesia",
@@ -51,7 +56,8 @@
     "img_path": "/projects/maze-group.png",
     "description": null,
     "url": null,
-    "tech": ["Laravel", "TailwindCSS", "ViteJS"]
+    "tech": ["Laravel", "TailwindCSS", "ViteJS"],
+    "highlighted": false
   },
   {
     "name": "Popcorn Vision",
@@ -60,7 +66,8 @@
     "img_path": "/projects/popcorn-vision.png",
     "description": "Your go-to website for movies and TV shows info. Explore a wide range of titles, with detailed synopses, reviews, cast and crew info. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.",
     "url": "https://www.popcorn.vision",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"]
+    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
+    "highlighted": true
   },
   {
     "name": "Rhythmic",
@@ -69,7 +76,8 @@
     "img_path": "/projects/rhythmic.png",
     "description": "Rhythmic is a Non-Copyright music streaming platform. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
     "url": "https://rhythmic.vercel.app",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"]
+    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
+    "highlighted": false
   },
   {
     "name": "GameCove",
@@ -78,6 +86,7 @@
     "img_path": "/projects/gamecove.png",
     "description": "Your ultimate destination for all things gaming! Explore the latest information about a wide range of games, from popular titles to upcoming releases. Our modern design and user-friendly interface provide an enjoyable browsing experience as you discover details about your favorite games. Whether you're a casual or hardcore gamer, GameCove is here to satisfy your curiosity.",
     "url": "https://gamecove.vercel.app",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"]
+    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
+    "highlighted": true
   }
 ]

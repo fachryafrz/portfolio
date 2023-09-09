@@ -20,52 +20,53 @@ export default function Projects() {
       </div>
       <div className="flex flex-col gap-6 mt-2 md:even:[&_article]:flex-row-reverse md:even:[&_article]:text-end">
         {projects
-          .slice(-3)
+          .slice()
           .reverse()
           .map((item, index) => {
-            return (
-              <article
-                key={index}
-                className="text-center flex flex-col md:flex-row md:text-start md:items-center gap-4"
-              >
-                <figure className="featured-projects min-w-[50%] rounded-lg overflow-hidden relative">
-                  <Reveal>
-                    <img
-                      src={item.img_path}
-                      alt={item.name}
-                      className="pointer-events-auto transition-all ease-linear"
-                    />
-                  </Reveal>
-                  <div className="open-project absolute inset-0 grid place-items-center backdrop-blur-sm opacity-0 hover:opacity-100 transition-all ease-linear">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      className="flex bg-accent text-bg rounded-full p-4 w-fit h-fit relative before:absolute before:inset-0 before:w-full before:h-full before:scale-125 before:border before:border-dashed before:border-accent before:rounded-full hover:before:scale-150 hover:before:rotate-180 before:transition-all before:ease-linear focus:outline-0 focus:before:scale-150 focus:before:rotate-180"
-                      rel="noreferrer"
-                    >
-                      <IonIcon icon={Icons.openOutline} />
-                    </a>
-                  </div>
-                </figure>
-                <Reveal>
-                  <div className="flex flex-col gap-4">
-                    <div>
-                      <span className="text-accent text-xs sm:text-sm font-medium">
-                        {item.type}
-                      </span>
-                      <h3
-                        className={`flex flex-col font-bold before:block before:text-accent text-2xl md:text-3xl`}
+            if (item.highlighted)
+              return (
+                <article
+                  key={index}
+                  className="text-center flex flex-col md:flex-row md:text-start md:items-center gap-4"
+                >
+                  <figure className="featured-projects min-w-[50%] max-w-[50%] rounded-lg overflow-hidden relative">
+                    <Reveal>
+                      <img
+                        src={item.img_path}
+                        alt={item.name}
+                        className="pointer-events-auto transition-all ease-linear"
+                      />
+                    </Reveal>
+                    <div className="open-project absolute inset-0 grid place-items-center backdrop-blur-sm opacity-0 hover:opacity-100 transition-all ease-linear">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        className="flex bg-accent text-bg rounded-full p-4 w-fit h-fit relative before:absolute before:inset-0 before:w-full before:h-full before:scale-125 before:border before:border-dashed before:border-accent before:rounded-full hover:before:scale-150 hover:before:rotate-180 before:transition-all before:ease-linear focus:outline-0 focus:before:scale-150 focus:before:rotate-180"
+                        rel="noreferrer"
                       >
-                        {item.name}
-                      </h3>
+                        <IonIcon icon={Icons.openOutline} />
+                      </a>
                     </div>
-                    <p className="text-desc text-xs sm:text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </Reveal>
-              </article>
-            );
+                  </figure>
+                  <Reveal>
+                    <div className="flex flex-col gap-4">
+                      <div>
+                        <span className="text-accent text-xs sm:text-sm font-medium">
+                          {item.type}
+                        </span>
+                        <h3
+                          className={`flex flex-col font-bold before:block before:text-accent text-2xl md:text-3xl`}
+                        >
+                          {item.name}
+                        </h3>
+                      </div>
+                      <p className="text-desc text-xs sm:text-sm">
+                        {item.description}
+                      </p>
+                    </div>
+                  </Reveal>
+                </article>
+              );
           })}
       </div>
       <Reveal>
