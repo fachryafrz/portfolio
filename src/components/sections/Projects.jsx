@@ -29,7 +29,7 @@ export default function Projects() {
                   key={index}
                   className="text-center flex flex-col md:flex-row md:text-start md:items-center gap-4"
                 >
-                  <figure className="featured-projects min-w-[50%] max-w-[50%] rounded-lg overflow-hidden relative">
+                  <figure className="featured-projects md:min-w-[50%] md:max-w-[50%] rounded-lg overflow-hidden relative">
                     <Reveal>
                       <img
                         src={item.img_path}
