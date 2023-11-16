@@ -34,7 +34,7 @@ export default function About() {
                 with over {yearsExperience} years of experience. I started my
                 career in mid 2020, and since then, I have been passionate about
                 creating amazing web application with the best user experience.
-                My skillset includes ReactJS, Flutter, Laravel, which are all
+                My skillset includes NextJS, Flutter, Laravel, which are all
                 modern and widely-used frameworks for building fast and
                 responsive applications.
               </p>
