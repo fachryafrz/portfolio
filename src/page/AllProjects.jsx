@@ -48,8 +48,12 @@ export default function AllProjects() {
                 className="all-projects relative rounded-lg overflow-hidden"
               >
                 <Reveal once={false}>
-                  <figure className="rounded-lg overflow-hidden relative">
-                    <img src={item.img_path} alt={item.name} />
+                  <figure className="rounded-lg overflow-hidden aspect-video relative">
+                    <img
+                      src={item.img_path}
+                      alt={item.name}
+                      className={`object-cover object-top`}
+                    />
                   </figure>
                 </Reveal>
                 <div className="open-project absolute inset-0 p-4 flex flex-col justify-end backdrop-blur-none bg-gradient-to-t from-black opacity-0 hover:opacity-100 transition-all ease-linear before:absolute before:inset-0 before:bg-gradient-to-t before:from-black before:to-black before:opacity-50 before:-z-10 after:absolute after:inset-0 after:bg-gradient-to-t after:from-black after:to-black after:via-black after:opacity-50 after:-z-10">
@@ -64,20 +68,22 @@ export default function AllProjects() {
                       {item.description}
                     </p>
                   )}
-                  <div className="flex gap-2 items-center mt-2">
-                    {item.tech.map((tech, index) => {
-                      return (
-                        <figure key={index} className="w-[25px]">
-                          <img
-                            src={`/tech/${tech}.png`}
-                            alt={tech}
-                            className="w-full pointer-events-auto"
-                            title={tech}
-                          />
-                        </figure>
-                      );
-                    })}
-                  </div>
+                  {item.tech && (
+                    <div className="flex gap-2 items-center mt-2">
+                      {item.tech.map((tech, index) => {
+                        return (
+                          <figure key={index} className="w-[25px]">
+                            <img
+                              src={`/tech/${tech}.png`}
+                              alt={tech}
+                              className="w-full pointer-events-auto"
+                              title={tech}
+                            />
+                          </figure>
+                        );
+                      })}
+                    </div>
+                  )}
                   {item.url !== null && (
                     <a
                       href={item.url}

@@ -40,6 +40,16 @@
     "highlighted": false
   },
   {
+    "name": "Koperasi Simpan Pinjam",
+    "type": "Mobile App",
+    "date": "2022-06-12",
+    "img_path": "/projects/ksp-mobile.png",
+    "description": null,
+    "url": null,
+    "tech": null,
+    "highlighted": false
+  },
+  {
     "name": "Jobtastic",
     "type": "Web App",
     "date": "2022-06-18",
@@ -57,6 +67,26 @@
     "description": null,
     "url": null,
     "tech": ["Laravel", "TailwindCSS", "ViteJS"],
+    "highlighted": false
+  },
+  {
+    "name": "Snap - Frontend Mentor",
+    "type": "Landing Page",
+    "date": "2023-01-30",
+    "img_path": "/projects/snap-fm.png",
+    "description": null,
+    "url": "https://fachryafrz.github.io/FMentor-intro-section-with-dropdown-navigation",
+    "tech": ["TailwindCSS"],
+    "highlighted": false
+  },
+  {
+    "name": "News - Frontend Mentor",
+    "type": "Landing Page",
+    "date": "2023-02-02",
+    "img_path": "/projects/news-fm.png",
+    "description": null,
+    "url": "https://fachryafrz.github.io/FMentor-news-homepage-main",
+    "tech": ["TailwindCSS"],
     "highlighted": false
   },
   {
