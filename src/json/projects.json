@@ -46,7 +46,7 @@
     "img_path": "/projects/ksp-mobile.png",
     "description": null,
     "url": null,
-    "tech": null,
+    "tech": ["Flutter"],
     "highlighted": false
   },
   {
@@ -96,7 +96,7 @@
     "img_path": "/projects/popcorn-vision.png",
     "description": "Your go-to website for movies and TV shows info. Explore a wide range of titles, with detailed synopses, reviews, cast and crew info. Convenient search functionality makes finding your favorites a breeze. Dive into the world of movies and television with Popcorn Vision.",
     "url": "https://www.popcorn.vision",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
+    "tech": ["NextJS", "ReactJS", "TailwindCSS"],
     "highlighted": true
   },
   {
@@ -116,7 +116,7 @@
     "img_path": "/projects/gamecove.png",
     "description": "Your ultimate destination for all things gaming! Explore the latest information about a wide range of games, from popular titles to upcoming releases. Our modern design and user-friendly interface provide an enjoyable browsing experience as you discover details about your favorite games. Whether you're a casual or hardcore gamer, GameCove is here to satisfy your curiosity.",
     "url": "https://gamecove.vercel.app",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
+    "tech": ["NextJS", "ReactJS", "TailwindCSS"],
     "highlighted": true
   }
 ]
