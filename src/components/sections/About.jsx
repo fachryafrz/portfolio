@@ -32,9 +32,9 @@ export default function About() {
                   Front-End Web Developer
                 </span>{" "}
                 with over {yearsExperience} years of experience. I started my
-                career in mid 2020, and since then, I have been passionate about
-                creating amazing web application with the best user experience.
-                My skillset includes NextJS, Flutter, Laravel, which are all
+                career in mid-2020, and since then, I have been passionate about
+                creating amazing web applications with the best user experience.
+                My skill set includes Nuxt, NextJS, Flutter, and Laravel, which are all
                 modern and widely-used frameworks for building fast and
                 responsive applications.
               </p>

@@ -110,13 +110,13 @@
     "highlighted": false
   },
   {
-    "name": "GameCove",
+    "name": "Ryplay",
     "type": "Web App",
-    "date": "2023-08-21",
-    "img_path": "/projects/gamecove.png",
-    "description": "Your ultimate destination for all things gaming! Explore the latest information about a wide range of games, from popular titles to upcoming releases. Our modern design and user-friendly interface provide an enjoyable browsing experience as you discover details about your favorite games. Whether you're a casual or hardcore gamer, GameCove is here to satisfy your curiosity.",
-    "url": "https://gamecove.vercel.app",
-    "tech": ["NextJS", "ReactJS", "TailwindCSS"],
+    "date": "2024-07-21",
+    "img_path": "/projects/ryplay.png",
+    "description": "Your ultimate destination for all things gaming! Explore the latest information about a wide range of games, from popular titles to upcoming releases. Our modern design and user-friendly interface provide an enjoyable browsing experience as you discover details about your favorite games. Whether you're a casual or hardcore gamer, Ryplay is here to satisfy your curiosity.",
+    "url": "https://ryplay.vercel.app",
+    "tech": ["Nuxt", "Vue", "TailwindCSS"],
     "highlighted": true
   }
 ]
