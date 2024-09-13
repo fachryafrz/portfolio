@@ -6,7 +6,7 @@ import Projects from "./components/sections/Projects";
 import Socials from "./components/Socials";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AllProjects from "./page/AllProjects";
+import AllProjects from "./page/AllProjects"; 
 
 function App() {
   return (
