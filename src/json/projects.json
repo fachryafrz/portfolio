@@ -100,16 +100,6 @@
     "highlighted": true
   },
   {
-    "name": "Rhythmic",
-    "type": "Web App",
-    "date": "2023-02-28",
-    "img_path": "/projects/rhythmic.png",
-    "description": "Rhythmic is a Non-Copyright music streaming platform. With an intuitive interface, it offers an immersive experience to enjoy favorite tunes and explore new tracks. From upbeat to calming melodies, Rhythmic has a diverse range of music genres to suit any mood.",
-    "url": "https://rhythmic.vercel.app",
-    "tech": ["ReactJS", "TailwindCSS", "ViteJS"],
-    "highlighted": false
-  },
-  {
     "name": "Ryplay",
     "type": "Web App",
     "date": "2024-07-21",
@@ -117,6 +107,16 @@
     "description": "Your ultimate destination for all things gaming! Explore the latest information about a wide range of games, from popular titles to upcoming releases. Our modern design and user-friendly interface provide an enjoyable browsing experience as you discover details about your favorite games. Whether you're a casual or hardcore gamer, Ryplay is here to satisfy your curiosity.",
     "url": "https://ryplay.vercel.app",
     "tech": ["Nuxt", "Vue", "TailwindCSS"],
+    "highlighted": true
+  },
+  {
+    "name": "Ryth",
+    "type": "Web App",
+    "date": "2024-08-26",
+    "img_path": "/projects/ryth.png",
+    "description": "Music Web App to listen to music, from a remastered project named \"Rhythmic\"",
+    "url": "https://ryth.vercel.app",
+    "tech": ["NextJS", "ReactJS", "TailwindCSS"],
     "highlighted": true
   }
 ]
