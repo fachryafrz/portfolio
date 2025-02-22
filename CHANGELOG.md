@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/fachryafrz/fachryafrz/compare/v1.0.0...v1.0.1) (2025-02-22)
+
+
+### Bug Fixes
+
+* branch name on snake.yml ([c07a1ad](https://github.com/fachryafrz/fachryafrz/commit/c07a1ad0f8af76a6abe999c11d47fa0d76da2137))
+
 ## 1.0.0 (2025-02-22)
 
 
