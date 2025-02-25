@@ -15,6 +15,7 @@ import useSWR from "swr";
 import axios from "axios";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { Skeleton } from "../ui/skeleton";
 
 export default function Project({ projects, project, index }) {
   const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
@@ -41,7 +42,8 @@ export default function Project({ projects, project, index }) {
       <div className={`lg:col-span-1`}>
         <div className={`h-fit sticky flex flex-col gap-4 top-[68px]`}>
           {project.img_path.map((img, imgIndex) => (
-            <button key={imgIndex}
+            <button
+              key={imgIndex}
               onClick={() => handleSetImagesSlider(index, imgIndex)}
               className={`overflow-hidden rounded-lg`}
             >
@@ -57,6 +59,7 @@ export default function Project({ projects, project, index }) {
                   width: "100%",
                   height: "auto",
                 }}
+                loading={`lazy`}
                 draggable={false}
                 className={`hover:scale-105 transition-all duration-500`}
               />
@@ -97,7 +100,9 @@ export default function Project({ projects, project, index }) {
 
 function TechStack({ tech }) {
   return (
-    <div className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}>
+    <div
+      className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}
+    >
       {tech.map((tech, index) => (
         <span key={index}>
           <TooltipProvider>
@@ -110,6 +115,7 @@ function TechStack({ tech }) {
                   width={50}
                   height={50}
                   draggable={false}
+                  loading={`lazy`}
                 />
               </TooltipTrigger>
               <TooltipContent side={`bottom`}>
@@ -127,13 +133,11 @@ function CTA({ url, github }) {
   return (
     <>
       {(url || github) && (
-        <div className={`flex gap-2 items-center sticky -bottom-1 py-2 pb-3 bg-opacity-60 backdrop-blur-sm bg-[#1a1a1a]`}>
+        <div
+          className={`flex gap-2 items-center sticky -bottom-1 py-2 pb-3 bg-opacity-60 backdrop-blur-sm bg-[#1a1a1a]`}
+        >
           {url && (
-            <Button
-              asChild
-              variant="default"
-              className={`bg-accent`}
-            >
+            <Button asChild variant="default" className={`bg-accent`}>
               <Link href={url} target={`_blank`}>
                 <span>Check it out!</span>
                 <ExternalLink />
