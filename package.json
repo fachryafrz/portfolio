@@ -33,6 +33,7 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "typewriter-effect": "^2.21.0",
+    "yet-another-react-lightbox": "^3.21.7",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
