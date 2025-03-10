@@ -184,7 +184,7 @@ export const projects = [
       // "/projects/whispo/chat.png",
     ],
     description: "/projects/whispo/README.md",
-    url: "https://whispo.vercel.app",
+    url: "https://whispochat.vercel.app",
     github_url: "https://github.com/fachryafrz/whispo",
     tech: [
       "Next.js",
