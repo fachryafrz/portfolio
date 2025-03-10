@@ -175,4 +175,26 @@ export const projects = [
     ],
     highlighted: true,
   },
+  {
+    name: "Whispo",
+    type: "Web App",
+    date: "2025-03-07",
+    img_path: [
+      "/projects/whispo/cover.png",
+      // "/projects/whispo/chat.png",
+    ],
+    description: "/projects/whispo/README.md",
+    url: "https://whispo.vercel.app",
+    github_url: "https://github.com/fachryafrz/whispo",
+    tech: [
+      "Next.js",
+      "React",
+      "HeroUI",
+      "Tailwind CSS",
+      "Clerk",
+      "Convex",
+      "Typescript",
+    ],
+    highlighted: true,
+  },
 ];
