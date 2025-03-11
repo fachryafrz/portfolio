@@ -24,4 +24,4 @@ Learn more about your favorite artists. Dive into their journey, listen to their
 
 Find your favorite songs or discover new ones easily with our intuitive search feature. With a user-friendly interface, Ryth makes it simple to navigate and discover new music.
 
-🎉 Visit our website at [Ryth](https://ryth.vercel.app) and start your musical journey today!
+🎉 Visit our website at [Ryth](https://ryth.fachryafrz.com) and start your musical journey today!

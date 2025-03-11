@@ -28,4 +28,4 @@ Get the inside scoop with our insightful reviews and ratings. Discover what othe
 
 Learn more about the talented individuals who bring your favorite movies and TV shows to life. From actors and actresses to directors and producers, we’ve got all the details you need.
 
-🎉 Visit our website at [Popcorn Vision](https://popcornvision.vercel.app) and discover a world of movies and TV shows like never before.
+🎉 Visit our website at [Popcorn Vision](https://popcorn.fachryafrz.com) and discover a world of movies and TV shows like never before.

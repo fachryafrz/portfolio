@@ -28,4 +28,4 @@ Check out ratings from other gamers. Discover what the community thinks about a 
 
 Our intuitive search bar lets you find games with just a few clicks. Whether you’re searching by title, genre, or platform, Ryplay makes it simple to navigate and discover new favorites.
 
-🎉 Visit our website at [Ryplay](https://ryplay.vercel.app) and start exploring the world of games today!
+🎉 Visit our website at [Ryplay](https://ryplay.fachryafrz.com) and start exploring the world of games today!
