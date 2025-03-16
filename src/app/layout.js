@@ -1,15 +1,16 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
+import { siteConfig } from "@/config/site";
 
 export const metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME,
-  description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
+  title: siteConfig.name,
+  description: siteConfig.description,
   openGraph: {
-    siteName: process.env.NEXT_PUBLIC_APP_NAME,
-    title: process.env.NEXT_PUBLIC_APP_NAME,
-    description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
-    url: process.env.NEXT_PUBLIC_APP_URL,
+    siteName: siteConfig.name,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
     images: {
       url: "/maskable/maskable_icon_x512.png",
       width: 512,
