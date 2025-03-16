@@ -17,18 +17,6 @@ export const metadata = {
       height: 512,
     },
   },
-  icons: {
-    icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/favicon/light/favicon.ico",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/favicon/dark/favicon.ico",
-      },
-    ],
-  },
   robots: {
     index: true,
     follow: false,
