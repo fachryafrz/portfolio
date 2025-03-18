@@ -59,7 +59,7 @@ export const projects = [
     ],
     description: "/projects/maze-group-indonesia/README.md",
     url: "https://mazegroupindonesia.com",
-    tech: ["Next.js", "React", "Laravel", "PHP", "daisyUI", "Tailwind CSS",],
+    tech: ["Next.js", "React", "Laravel", "PHP", "daisyUI", "Tailwind CSS"],
     highlighted: false,
   },
   // {
@@ -112,7 +112,11 @@ export const projects = [
   //   name: "PEI iFast Dashboard",
   //   type: "Web App",
   //   date: "2023-09-20",
-  //   img_path: ["/projects/pei-ifast-dashboard/home.png"],
+  //   img_path: [
+  //     "/projects/pei-ifast-dashboard/summary.png",
+  //     "/projects/pei-ifast-dashboard/margin.png",
+  //     "/projects/pei-ifast-dashboard/repo.png",
+  //   ],
   //   description: "/projects/pei-ifast-dashboard/README.md",
   //   url: null,
   //   github_url: null,
