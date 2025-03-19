@@ -6,7 +6,19 @@ It provides insights into its affiliated studios, expanding its capabilities in 
 
 ## Fun fact
 
-Initially built with **PHP and CodeIgniter 3**, the project later migrated to **Laravel** for improved development efficiency. As the need for better **SEO** arose, the backend transitioned into a **Laravel API**, while the frontend was rebuilt using **Next.js**.
+- ### July 2022
+
+  Initially built with **PHP and CodeIgniter 3**
+
+- ### November 2022
+
+  This project later migrated to **Laravel**
+
+- ### January 2024
+
+  As the need for better **SEO**, the backend transitioned into a **Laravel API**, while the frontend was rebuilt using **Next.js**
 
 <!-- NOTE: Uncomment this when the project is fully migrated -->
-<!-- To streamline maintenance and because Laravel was used less frequently, the project has now fully migrated to **Next.js, Convex, and Clerk**, making content management and authentication more efficient while reducing dependency on backend frameworks. -->
+<!-- - ### March 2025
+
+  To streamline maintenance and because **Laravel** was used less frequently, the project has now fully migrated to **Next.js, Convex, and Clerk**, making content management and authentication more efficient while reducing dependency on backend frameworks. -->
