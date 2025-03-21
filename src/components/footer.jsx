@@ -9,26 +9,31 @@ export default function Footer() {
       name: "GitHub",
       icon: <Github />,
       url: "https://github.com/fachryafrz",
+      ariaLabel: "Check out my GitHub profile",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin />,
       url: "https://linkedin.com/in/fachryafrz",
+      ariaLabel: "Check out my LinkedIn profile",
     },
     {
       name: "GMail",
       icon: <Mail />,
       url: "mailto:fachrydwiafriza@gmail.com",
+      ariaLabel: "Send me an email",
     },
     {
       name: "Twitter",
       icon: <Twitter />,
       url: "https://twitter.com/fachryafrz",
+      ariaLabel: "Check out my Twitter profile",
     },
     {
       name: "Instagram",
       icon: <Instagram />,
       url: "https://instagram.com/fachryafrz",
+      ariaLabel: "Check out my Instagram profile",
     },
   ];
 
@@ -40,6 +45,7 @@ export default function Footer() {
             <Link
               href={social.url}
               target={`_blank`}
+              aria-label={social.ariaLabel}
               className={`flex hover:-translate-y-1 transition-all focus:outline-0 focus:-translate-y-1`}
             >
               {social.icon}

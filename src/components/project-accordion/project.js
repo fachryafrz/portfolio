@@ -105,7 +105,7 @@ function TechStack({ tech }) {
     >
       {tech.map((tech, index) => (
         <span key={index}>
-          <TooltipProvider>
+          <TooltipProvider delayDuration={0}>
             <Tooltip>
               <TooltipTrigger asChild>
                 <img
