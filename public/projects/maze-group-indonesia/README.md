@@ -18,7 +18,6 @@ It provides insights into its affiliated studios, expanding its capabilities in 
 
   As the need for better **SEO**, the backend transitioned into a **Laravel API**, while the frontend was rebuilt using **Next.js**
 
-<!-- NOTE: Uncomment this when the project is fully migrated -->
-<!-- - ### March 2025
+- ### March 2025
 
-  To streamline maintenance and because **Laravel** was used less frequently, the project has now fully migrated to **Next.js, Convex, and Clerk**, making content management and authentication more efficient while reducing dependency on backend frameworks. -->
+  To streamline maintenance and because **Laravel** was used less frequently, the project has now fully migrated to **Next.js, Convex, and Clerk**, making content management and authentication more efficient while reducing dependency on backend frameworks.
