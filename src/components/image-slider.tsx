@@ -15,6 +15,9 @@ export default function ImageSlider() {
       slides={images.map((img) => ({ src: img }))}
       index={selectedIndex}
       plugins={[Zoom]}
+      carousel={{ 
+        finite: true
+       }}
     />
   );
 }
