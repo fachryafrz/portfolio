@@ -1,6 +1,6 @@
 import { defineQuery } from "next-sanity";
 
-export const PROJECTS_QUERY = defineQuery(`*[_type == "projects"]{
+export const PROJECTS_QUERY = defineQuery(`*[_type == "projects" && show == true] {
     _id, 
     date, 
     description, 
