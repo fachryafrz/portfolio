@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
-import PixelCursorTrailing from "@/components/pixel-cursor-trailing/page";
-import ProjectAccordion from "@/components/project-accordion/page";
+import PixelCursorTrailing from "@/components/pixel-cursor-trailing";
+import ProjectAccordion from "@/components/project-accordion";
 import ImageSlider from "@/components/image-slider";
 import { siteConfig } from "@/config/site";
 
