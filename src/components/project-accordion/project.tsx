@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import { useImageSlider } from "@/zustand/image-slider";
-import Image from "next/image";
 import {
   Tooltip,
   TooltipContent,
@@ -11,66 +12,37 @@ import { CalendarDays, ExternalLink, Github } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import useSWR from "swr";
-import axios from "axios";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Skeleton } from "../ui/skeleton";
+import toMarkdown from "@sanity/block-content-to-markdown";
 
 export default function Project({ projects, project, index }) {
-  const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
-
-  const handleSetImagesSlider = (index: number, imgIndex: number) => {
-    setImages(projects[index].img_path);
-    setSelectedIndex(imgIndex);
-    setOpen(!open);
-  };
-
-  const { data: description } = useSWR(
-    project.description,
-    (query) => axios.get(query).then(({ data }) => data),
-    {
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }
-  );
-
   return (
     <div className={`px-4 grid md:grid-cols-2 lg:grid-cols-2 gap-4`}>
       {/* Images */}
       <div className={`lg:col-span-1`}>
         <div className={`h-fit sticky flex flex-col gap-4 top-[68px]`}>
-          {project.img_path.map((img: string, imgIndex: number) => (
-            <button
+          {project.images.map((img, imgIndex) => (
+            <ProjectImage
               key={imgIndex}
-              onClick={() => handleSetImagesSlider(index, imgIndex)}
-              className={`overflow-hidden rounded-lg`}
-            >
-              <Image
-                src={img}
-                alt={``}
-                role={`presentation`}
-                quality={100}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-                loading={`lazy`}
-                draggable={false}
-                className={`hover:scale-105 transition-all duration-500`}
-              />
-            </button>
+              img={img}
+              imgIndex={imgIndex}
+              index={index}
+              projects={projects}
+            />
           ))}
         </div>
       </div>
 
       <div className={`space-y-4 h-fit sticky top-[68px]`}>
         {/* Tech Stack */}
-        <TechStack tech={project.tech} />
+        <div
+          className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}
+        >
+          {project.technologies.map((tech, index) => (
+            <TechStack key={index} tech={tech} />
+          ))}
+        </div>
 
         {/* Date */}
         <div className={`flex text-accent items-center gap-2`}>
@@ -88,44 +60,64 @@ export default function Project({ projects, project, index }) {
           rehypePlugins={[rehypeRaw]}
           className="prose [&_*]:text-white [&_*]:text-pretty prose-p:!text-neutral-400 prose-li:!text-neutral-400"
         >
-          {description}
+          {toMarkdown(project.description)}
         </Markdown>
 
         {/* CTA */}
-        <CTA url={project.url} github={project.github_url} />
+        <CTA url={project.url} github={project.github} />
       </div>
     </div>
   );
 }
 
+function ProjectImage({ img, imgIndex, index, projects }) {
+  const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
+
+  const handleSetImagesSlider = (index: number, imgIndex: number) => {
+    setImages(projects[index].images);
+    setSelectedIndex(imgIndex);
+    setOpen(!open);
+  };
+
+  return (
+    <button
+      key={imgIndex}
+      onClick={() => handleSetImagesSlider(index, imgIndex)}
+      className={`overflow-hidden rounded-lg`}
+    >
+      <img
+        src={img}
+        alt={``}
+        loading={`lazy`}
+        draggable={false}
+        className={`hover:scale-105 transition-all duration-500`}
+      />
+    </button>
+  );
+}
+
 function TechStack({ tech }) {
   return (
-    <div
-      className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}
-    >
-      {tech.map((tech: string, index: number) => (
-        <span key={index}>
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <img
-                  src={`/tech/${encodeURI(tech)}.png`}
-                  alt={``}
-                  role={`presentation`}
-                  width={50}
-                  height={50}
-                  draggable={false}
-                  loading={`lazy`}
-                />
-              </TooltipTrigger>
-              <TooltipContent side={`bottom`}>
-                <p>{decodeURI(tech)}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </span>
-      ))}
-    </div>
+    <span>
+      <TooltipProvider delayDuration={0}>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <img
+              src={tech.image}
+              width={50}
+              height={50}
+              alt={``}
+              role={`presentation`}
+              draggable={false}
+              loading={`lazy`}
+            />
+          </TooltipTrigger>
+          <TooltipContent side={`bottom`}>
+            <p>{tech.title}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </span>
   );
 }
 
