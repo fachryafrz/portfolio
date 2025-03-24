@@ -58,7 +58,19 @@ export default function Project({ projects, project, index }) {
         <Markdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
-          className="prose [&_*]:text-white [&_*]:text-pretty prose-p:!text-neutral-400 prose-li:!text-neutral-400"
+          className="prose [&_*]:text-white [&_*]:text-pretty"
+          components={{
+            p: ({ node, ...props }) => (
+              <p {...props} className="!text-neutral-400">
+                {props.children}
+              </p>
+            ),
+            li: ({ node, ...props }) => (
+              <li {...props} className="!text-neutral-400">
+                {props.children}
+              </li>
+            ),
+          }}
         >
           {toMarkdown(project.description)}
         </Markdown>
