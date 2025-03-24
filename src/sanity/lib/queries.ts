@@ -13,5 +13,6 @@ export const PROJECTS_QUERY = defineQuery(`*[_type == "projects" && show == true
       "image": image_path.asset->url
     }, 
     url,
+    github,
     show
   } | order(date desc)`);
