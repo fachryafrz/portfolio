@@ -23,10 +23,6 @@ export const projectType = defineType({
       type: "string",
     }),
     defineField({
-      name: "description",
-      type: "blockContent",
-    }),
-    defineField({
       name: "date",
       type: "date",
     }),
@@ -49,6 +45,10 @@ export const projectType = defineType({
       of: [
         defineArrayMember({ type: "reference", to: { type: "technologies" } }),
       ],
+    }),
+    defineField({
+      name: "description",
+      type: "blockContent",
     }),
     defineField({
       name: "highlighted",
