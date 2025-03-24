@@ -4,6 +4,8 @@ import ProjectAccordion from "@/components/project-accordion/page";
 import ImageSlider from "@/components/image-slider";
 import { siteConfig } from "@/config/site";
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <div>
