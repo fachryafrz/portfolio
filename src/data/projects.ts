@@ -1,11 +1,11 @@
 export const projects = [
   {
-    name: "Rekrut.",
+    name: "Rekrut",
     type: "Landing Page",
     date: "2021-06-13",
     img_path: ["/projects/rekrut/home.png"],
     description: "/projects/rekrut/README.md",
-    url: "https://fachryafrz-rekrut.netlify.app",
+    url: "https://rekrut.fachryafrz.com",
     tech: ["HTML", "CSS", "JavaScript"],
     highlighted: false,
   },
