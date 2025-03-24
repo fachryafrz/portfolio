@@ -2,8 +2,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import { siteConfig } from "@/config/site";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   openGraph: {
@@ -29,7 +30,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased font-fira-code bg-[#1a1a1a]`}>

@@ -20,7 +20,7 @@ import { Skeleton } from "../ui/skeleton";
 export default function Project({ projects, project, index }) {
   const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
 
-  const handleSetImagesSlider = (index, imgIndex) => {
+  const handleSetImagesSlider = (index: number, imgIndex: number) => {
     setImages(projects[index].img_path);
     setSelectedIndex(imgIndex);
     setOpen(!open);
@@ -41,7 +41,7 @@ export default function Project({ projects, project, index }) {
       {/* Images */}
       <div className={`lg:col-span-1`}>
         <div className={`h-fit sticky flex flex-col gap-4 top-[68px]`}>
-          {project.img_path.map((img, imgIndex) => (
+          {project.img_path.map((img: string, imgIndex: number) => (
             <button
               key={imgIndex}
               onClick={() => handleSetImagesSlider(index, imgIndex)}
@@ -103,7 +103,7 @@ function TechStack({ tech }) {
     <div
       className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}
     >
-      {tech.map((tech, index) => (
+      {tech.map((tech: string, index: number) => (
         <span key={index}>
           <TooltipProvider delayDuration={0}>
             <Tooltip>
