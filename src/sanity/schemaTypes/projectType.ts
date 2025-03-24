@@ -48,7 +48,8 @@ export const projectType = defineType({
     }),
     defineField({
       name: "description",
-      type: "blockContent",
+      type: "array",
+      of: [{ type: "block" }],
     }),
     defineField({
       name: "highlighted",
