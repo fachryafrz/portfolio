@@ -1,3 +1,4 @@
+import { Projects } from "../../../sanity.types";
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +10,7 @@ import { client } from "@/sanity/lib/client";
 import { PROJECTS_QUERY } from "@/sanity/lib/queries";
 
 export default async function ProjectAccordion() {
-  const projects = await client.fetch(PROJECTS_QUERY);
+  const projects: Projects[] = await client.fetch(PROJECTS_QUERY);
 
   return (
     <div>

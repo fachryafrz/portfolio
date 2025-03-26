@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import { useImageSlider } from "@/zustand/image-slider";
 import {
@@ -15,14 +15,23 @@ import rehypeRaw from "rehype-raw";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import toMarkdown from "@sanity/block-content-to-markdown";
+import { Projects } from "../../../sanity.types";
 
-export default function Project({ projects, project, index }) {
+export default function Project({
+  projects,
+  project,
+  index,
+}: {
+  projects: Projects[];
+  project: Projects;
+  index: number;
+}) {
   return (
     <div className={`px-4 grid md:grid-cols-2 lg:grid-cols-2 gap-4`}>
       {/* Images */}
       <div className={`lg:col-span-1`}>
         <div className={`h-fit sticky flex flex-col gap-4 top-[68px]`}>
-          {project.images.map((img, imgIndex) => (
+          {project.image_path.map((img, imgIndex) => (
             <ProjectImage
               key={imgIndex}
               img={img}
@@ -115,7 +124,7 @@ function TechStack({ tech }) {
         <Tooltip>
           <TooltipTrigger asChild>
             <img
-              src={tech.image}
+              src={tech.image_path}
               width={50}
               height={50}
               alt={``}
