@@ -47,7 +47,7 @@ export default function Project({ projects, project, index }) {
         {/* Date */}
         <div className={`flex text-accent items-center gap-2`}>
           <CalendarDays size={20} />
-          <span className={`block`}>
+          <span className={`block font-bold`}>
             {new Date(project.date).toLocaleDateString("US", {
               dateStyle: "long",
             })}
