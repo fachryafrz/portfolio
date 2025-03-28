@@ -3,6 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -48,6 +49,8 @@ export default function RootLayout({
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
       </body>
+
+      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
     </html>
   );
 }
