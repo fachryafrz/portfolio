@@ -1,4 +1,6 @@
-export default function manifest() {
+import { MetadataRoute } from "next";
+
+export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "fachryafrz",
     short_name: "fachryafrz",
