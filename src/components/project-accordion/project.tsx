@@ -95,7 +95,7 @@ function ProjectImage({ img, imgIndex, index, projects }) {
   const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
 
   const handleSetImagesSlider = (index: number, imgIndex: number) => {
-    setImages(projects[index].images);
+    setImages(projects[index].image_path);
     setSelectedIndex(imgIndex);
     setOpen(!open);
   };

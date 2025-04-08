@@ -12,7 +12,7 @@ export default function ImageSlider() {
     <Lightbox
       open={open}
       close={() => setOpen(false)}
-      slides={images.map((img) => ({ src: img }))}
+      slides={images?.map((img) => ({ src: img }))}
       index={selectedIndex}
       plugins={[Zoom]}
       carousel={{ 
