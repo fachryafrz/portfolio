@@ -48,7 +48,7 @@ export default function Project({
         <div
           className={`flex gap-2 flex-wrap justify-center md:justify-start items-center`}
         >
-          {project.technologies.map((tech, index) => (
+          {project.technologies?.map((tech, index) => (
             <TechStack key={index} tech={tech} />
           ))}
         </div>
@@ -111,7 +111,7 @@ function ProjectImage({ img, imgIndex, index, projects }) {
         alt={``}
         loading={`lazy`}
         draggable={false}
-        className={`hover:scale-105 transition-all duration-500`}
+        className={`hover:scale-105 w-full transition-all duration-500`}
       />
     </button>
   );
