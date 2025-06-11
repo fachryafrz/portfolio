@@ -50,7 +50,7 @@ export default function UserInfo() {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(1900)
+              .pauseFor(1800)
               .callFunction((cb) => {
                 cb.elements.cursor.classList.remove("hidden");
               })
