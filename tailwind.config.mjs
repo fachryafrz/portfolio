@@ -20,7 +20,6 @@ export default {
   			]
   		},
   		colors: {
-  			bg: '#1a1a1a',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

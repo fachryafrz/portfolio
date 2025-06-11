@@ -1,23 +1,24 @@
-import Footer from "@/components/footer";
-import PixelCursorTrailing from "@/components/pixel-cursor-trailing";
-import ProjectAccordion from "@/components/project-accordion";
-import ImageSlider from "@/components/image-slider";
 import { siteConfig } from "@/config/site";
+import UserInfo from "@/components/user-info";
 
 export const revalidate = 60;
 
 export default function Home() {
   return (
-    <div>
+    <div className="mx-auto grid min-h-dvh max-w-7xl grid-cols-2 gap-4 p-4">
       <h1 className="sr-only">{siteConfig.name}</h1>
 
-      <PixelCursorTrailing />
+      {/* Information */}
+      <div className="fixed flex h-dvh items-center pb-16">
+        <UserInfo />
+      </div>
 
-      <ProjectAccordion />
+      {/* Experience & Projects */}
+      <div>
+        {/* Experience */}
 
-      <ImageSlider />
-
-      <Footer />
+        {/* Projects */}
+      </div>
     </div>
   );
 }

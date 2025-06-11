@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/smooth-scroll";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import ImageSlider from "@/components/image-slider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -39,14 +40,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased font-fira-code bg-[#1a1a1a]`}>
+      <body className={`font-tnr antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            {children}
+            <ImageSlider />
+          </SmoothScroll>
         </ThemeProvider>
       </body>
 

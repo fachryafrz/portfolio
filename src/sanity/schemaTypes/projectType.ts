@@ -1,11 +1,11 @@
-import { ProjectsIcon } from "@sanity/icons";
+import { Grid2x2Plus } from "lucide-react";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const projectType = defineType({
   name: "projects",
   title: "Projects",
   type: "document",
-  icon: ProjectsIcon,
+  icon: Grid2x2Plus,
   fields: [
     defineField({
       name: "title",
