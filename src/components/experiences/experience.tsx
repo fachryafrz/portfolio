@@ -16,7 +16,7 @@ export default function Experience({
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <div className="group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 hover:!opacity-100 group-hover/experiences:opacity-50 sm:grid-cols-4">
+    <div className="@xl:grid-cols-4 group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 hover:!opacity-100 group-hover/experiences:opacity-50">
       <Link
         href={exp.companyUrl || ""}
         className={cn(

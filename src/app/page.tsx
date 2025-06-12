@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Experience & Projects */}
-      <div className="space-y-4 lg:py-16 lg:col-start-2">
+      <div className="@container space-y-16 lg:col-start-2 lg:space-y-8 lg:py-16">
         {/* Experience */}
         <Experiences />
 
