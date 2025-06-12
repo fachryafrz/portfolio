@@ -9,6 +9,7 @@ import toMarkdown from "@sanity/block-content-to-markdown";
 import ReactMarkdown from "react-markdown";
 import { ArrowUpRight, Github } from "lucide-react";
 import { useImageSlider } from "@/src/zustand/image-slider";
+import ListOfTechnologies from "../list-of-technologies";
 
 export default function Project({
   project,
@@ -68,7 +69,7 @@ export default function Project({
         <ReactMarkdown
           components={{
             strong: ({ node, ...props }) => (
-              <strong className="text-accent" {...props} />
+              <strong className="font-normal text-accent" {...props} />
             ),
           }}
         >
@@ -77,16 +78,7 @@ export default function Project({
       </div>
 
       {/* Tech Stack */}
-      <div className="flex flex-wrap gap-2">
-        {project.technologies.map((tech) => (
-          <span
-            key={tech.title}
-            className="block w-fit rounded-full bg-accent/20 p-1 px-2 font-fira-code text-sm font-medium text-accent"
-          >
-            {tech.title}
-          </span>
-        ))}
-      </div>
+      <ListOfTechnologies technologies={project.technologies} />
 
       {/* Images */}
       <div className="z-10 flex flex-wrap items-center gap-2">

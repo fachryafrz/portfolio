@@ -7,6 +7,7 @@ import { useState } from "react";
 import { EXPERIENCES_QUERYResult } from "@/sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
+import ListOfTechnologies from "../list-of-technologies";
 
 export default function Experience({
   exp,
@@ -16,7 +17,7 @@ export default function Experience({
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <div className="@xl:grid-cols-4 group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 lg:hover:!opacity-100 lg:group-hover/experiences:opacity-50">
+    <div className="group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 @xl:grid-cols-4 lg:hover:!opacity-100 lg:group-hover/experiences:opacity-50">
       <Link
         href={exp.companyUrl || ""}
         className={cn(
@@ -71,16 +72,7 @@ export default function Experience({
 
         {/* Tech Stack */}
         {exp.technologies?.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {exp.technologies.map((tech) => (
-              <span
-                key={tech.title}
-                className="block w-fit rounded-full bg-accent/20 p-1 px-2 font-fira-code text-sm font-medium text-accent"
-              >
-                {tech.title}
-              </span>
-            ))}
-          </div>
+          <ListOfTechnologies technologies={exp.technologies} />
         )}
       </div>
     </div>

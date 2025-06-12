@@ -2,6 +2,7 @@
 
 import { FileText, Github, Mail, Linkedin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Markdown from "react-markdown";
 import Typewriter from "typewriter-effect";
 
 export default function UserInfo() {
@@ -25,6 +26,8 @@ export default function UserInfo() {
       ariaLabel: "Send me an email",
     },
   ];
+
+  const description = `I'm a **Web Developer specializing in Front-End**, based in Jakarta. Experienced in developing **responsive and interactive web applications** using frameworks such as Next.js, Nuxt, and Laravel. Expert in **translating UI/UX designs into efficient and functional code**, and committed to providing the best user experience.`;
 
   return (
     <section className="flex flex-col gap-4">
@@ -72,7 +75,7 @@ export default function UserInfo() {
           }
           target={`_blank`}
           aria-label={"Check out my resume"}
-          className={`group flex w-fit items-center gap-2 border border-white p-2 transition-all hover:border-accent hover:text-accent`}
+          className={`group flex w-fit items-center gap-2 rounded-lg border border-white p-2 transition-all hover:border-accent hover:text-accent`}
           rel="noopener noreferrer"
         >
           <FileText size={16} />
@@ -98,22 +101,17 @@ export default function UserInfo() {
       </div>
 
       {/* Description */}
-      <p className="max-w-[495px] text-pretty">
-        I&apos;m a{" "}
-        <span className="text-accent">
-          Web Developer specializing in Front-End
-        </span>
-        , based in Jakarta. Experienced in developing{" "}
-        <span className="text-accent">
-          responsive and interactive web applications
-        </span>{" "}
-        using frameworks such as Next.js, Nuxt, and Laravel. Expert in
-        <span className="text-accent">
-          {" "}
-          translating UI/UX designs into efficient and functional code
-        </span>
-        , and committed to providing the best user experience.
-      </p>
+      <div className="max-w-[495px] text-pretty">
+        <Markdown
+          components={{
+            strong: ({ node, ...props }) => (
+              <strong className="font-normal text-accent" {...props} />
+            ),
+          }}
+        >
+          {description}
+        </Markdown>
+      </div>
     </section>
   );
 }
