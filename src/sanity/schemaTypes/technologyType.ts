@@ -1,11 +1,11 @@
-import { StackCompactIcon } from "@sanity/icons";
+import { Laptop } from "lucide-react";
 import { defineField, defineType } from "sanity";
 
 export const technologyType = defineType({
   name: "technologies",
   title: "Technologies",
   type: "document",
-  icon: StackCompactIcon,
+  icon: Laptop,
   fields: [
     defineField({
       name: "title",

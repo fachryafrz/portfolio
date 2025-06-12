@@ -11,11 +11,10 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.2.4",
-    "@radix-ui/react-accordion": "^1.2.3",
-    "@radix-ui/react-dialog": "^1.1.6",
-    "@radix-ui/react-slot": "^1.1.2",
-    "@radix-ui/react-tooltip": "^1.1.8",
-    "@sanity/block-content-to-markdown": "^1.0.0",
+    "@radix-ui/react-accordion": "^1.2.10",
+    "@radix-ui/react-dialog": "^1.1.13",
+    "@radix-ui/react-slot": "^1.2.2",
+    "@radix-ui/react-tooltip": "^1.2.6",
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.80.1",
@@ -23,6 +22,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.15.0",
     "gsap": "^3.12.5",
     "lenis": "^1.1.18",
@@ -33,7 +33,7 @@
     "next-themes": "^0.4.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-markdown": "^9.0.3",
+    "react-markdown": "^10.1.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "sanity": "^3.80.1",
@@ -48,11 +48,16 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@sanity/block-content-to-markdown": "^1.0.0",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@types/node": "^22.13.11",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "postcss": "^8",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^3.4.1"
-  },
-  "packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4"
+  }
 }

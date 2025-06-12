@@ -1,11 +1,11 @@
-import { ProjectsIcon } from "@sanity/icons";
+import { Grid2x2Plus } from "lucide-react";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const projectType = defineType({
   name: "projects",
   title: "Projects",
   type: "document",
-  icon: ProjectsIcon,
+  icon: Grid2x2Plus,
   fields: [
     defineField({
       name: "title",
@@ -21,6 +21,14 @@ export const projectType = defineType({
     defineField({
       name: "type",
       type: "string",
+      options: {
+        list: [
+          { title: "Landing Page", value: "Landing Page" },
+          { title: "Web App", value: "Web App" },
+          { title: "Company Profile", value: "Company Profile" },
+        ],
+        layout: "radio",
+      },
     }),
     defineField({
       name: "date",
@@ -48,6 +56,11 @@ export const projectType = defineType({
     }),
     defineField({
       name: "description",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
+      name: "shortDescription",
       type: "array",
       of: [{ type: "block" }],
     }),

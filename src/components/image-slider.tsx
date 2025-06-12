@@ -1,6 +1,6 @@
 "use client";
 
-import { useImageSlider } from "@/zustand/image-slider";
+import { useImageSlider } from "@/src/zustand/image-slider";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
