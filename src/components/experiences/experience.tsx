@@ -16,7 +16,7 @@ export default function Experience({
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <div className="group relative -mx-4 grid gap-4 p-4 transition-colors hover:bg-accent/10 sm:grid-cols-4">
+    <div className="group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 hover:!opacity-100 group-hover/experiences:opacity-50 sm:grid-cols-4">
       <Link
         href={exp.companyUrl || ""}
         className={cn(
@@ -51,7 +51,7 @@ export default function Experience({
           {exp.companyUrl && (
             <ArrowUpRight
               size={16}
-              className="opacity-0 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
+              className="pointer-events-none opacity-0 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
             />
           )}
         </div>

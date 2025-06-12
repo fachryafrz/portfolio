@@ -3,14 +3,11 @@
 
 import { cn } from "@/src/lib/utils";
 import Link from "next/link";
-import { useState } from "react";
 import { PROJECTS_QUERYResult } from "@/sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import { useImageSlider } from "@/src/zustand/image-slider";
 
 export default function Project({
@@ -18,10 +15,6 @@ export default function Project({
 }: {
   project: PROJECTS_QUERYResult[number];
 }) {
-  const [readMore, setReadMore] = useState(false);
-
-  console.log(project);
-
   const { open, setOpen, setImages, setSelectedIndex } = useImageSlider();
 
   const handleSetImagesSlider = (imgIndex: number) => {
@@ -31,7 +24,7 @@ export default function Project({
   };
 
   return (
-    <div className="group relative -mx-4 flex flex-col gap-4 p-4 transition-colors hover:bg-accent/10">
+    <div className="group relative -mx-4 flex flex-col gap-4 p-4 transition-all hover:bg-accent/10 hover:!opacity-100 group-hover/projects:opacity-50">
       <Link
         href={project.url || ""}
         className={cn(
@@ -43,13 +36,24 @@ export default function Project({
       ></Link>
 
       {/* Name & Type */}
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg">{`${project.title} · ${project.type}`}</h3>
+      <div className="flex items-center">
+        <h3 className="grow text-lg">{`${project.title} · ${project.type}`}</h3>
+
+        {project.github && (
+          <Link
+            href={project.github}
+            className={"z-10 block transition-all hover:text-accent"}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Github size={16} />
+          </Link>
+        )}
 
         {project.url && (
           <ArrowUpRight
             size={16}
-            className="opacity-0 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
+            className="pointer-events-none opacity-0 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
           />
         )}
       </div>

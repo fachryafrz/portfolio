@@ -13,7 +13,7 @@ export default async function Experiences() {
         Experiences
       </h2>
 
-      <ul>
+      <ul className="group/experiences">
         {experiences.map((exp) => (
           <li key={exp._id} className="border-b last:border-b-0">
             <Experience exp={exp} />
