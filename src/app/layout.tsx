@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/src/components/theme-provider";
 import "./globals.css";
-import SmoothScroll from "@/components/smooth-scroll";
-import { siteConfig } from "@/config/site";
+import SmoothScroll from "@/src/components/smooth-scroll";
+import { siteConfig } from "@/src/config/site";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import ImageSlider from "@/components/image-slider";
+import ImageSlider from "@/src/components/image-slider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -54,7 +54,7 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
 
-      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID} />
+      <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID!} />
     </html>
   );
 }

@@ -21,6 +21,14 @@ export const projectType = defineType({
     defineField({
       name: "type",
       type: "string",
+      options: {
+        list: [
+          { title: "Landing Page", value: "Landing Page" },
+          { title: "Web App", value: "Web App" },
+          { title: "Company Profile", value: "Company Profile" },
+        ],
+        layout: "radio",
+      },
     }),
     defineField({
       name: "date",

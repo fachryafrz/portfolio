@@ -6,8 +6,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import Project from "./project";
-import { client } from "@/sanity/lib/client";
-import { PROJECTS_QUERY } from "@/sanity/lib/queries";
+import { client } from "@/src/sanity/lib/client";
+import { PROJECTS_QUERY } from "@/src/sanity/lib/queries";
 
 export default async function ProjectAccordion() {
   const projects: Projects[] = await client.fetch(PROJECTS_QUERY);
@@ -25,10 +25,10 @@ export default async function ProjectAccordion() {
               className={`relative`}
             >
               <AccordionTrigger
-                className={`flex-col px-4 items-start md:flex-row hover:px-2 [&_span]:hover:opacity-40`}
+                className={`flex-col items-start px-4 hover:px-2 md:flex-row [&_span]:hover:opacity-40`}
               >
-                <span className={`text-3xl text-start`}>{project.title}</span>
-                <span className={`text-start sm:text-end text-accent`}>
+                <span className={`text-start text-3xl`}>{project.title}</span>
+                <span className={`text-start text-accent sm:text-end`}>
                   {project.type}
                 </span>
               </AccordionTrigger>

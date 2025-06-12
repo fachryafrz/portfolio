@@ -1,5 +1,6 @@
 import { Building2 } from "lucide-react";
 import { defineArrayMember, defineField, defineType } from "sanity";
+import dayjs from "dayjs";
 
 export const experienceType = defineType({
   name: "experiences",
@@ -13,9 +14,29 @@ export const experienceType = defineType({
       type: "string",
     }),
     defineField({
+      name: "type",
+      title: "Job Type",
+      type: "string",
+      options: {
+        list: [
+          { title: "Full Time", value: "Full Time" },
+          { title: "Part Time", value: "Part Time" },
+          { title: "Internship", value: "Internship" },
+          { title: "Contract", value: "Contract" },
+          { title: "Freelance", value: "Freelance" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "company",
       title: "Company",
       type: "string",
+    }),
+    defineField({
+      name: "companyUrl",
+      title: "Company URL",
+      type: "url",
     }),
     defineField({
       name: "location",
@@ -52,4 +73,22 @@ export const experienceType = defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      title: "title",
+      startDate: "startDate",
+      endDate: "endDate",
+      type: "type",
+    },
+    prepare(selection) {
+      return {
+        title: selection.title,
+        subtitle: `${dayjs(selection.startDate).format("MMM YYYY")} - ${
+          selection.endDate
+            ? dayjs(selection.endDate).format("MMM YYYY")
+            : "Present"
+        } (${selection.type})`,
+      };
+    },
+  },
 });

@@ -27,7 +27,7 @@ export default function UserInfo() {
   ];
 
   return (
-    <div className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4">
       <div
         className={`min-h-[48px] gap-2 font-tnr text-4xl font-bold sm:text-5xl sm:tracking-wide`}
       >
@@ -58,7 +58,7 @@ export default function UserInfo() {
               .start();
           }}
           options={{
-            delay: 90,
+            delay: 60,
             cursorClassName: "Typewriter__cursor hidden",
           }}
         />
@@ -114,6 +114,6 @@ export default function UserInfo() {
         </span>
         , and committed to providing the best user experience.
       </p>
-    </div>
+    </section>
   );
 }

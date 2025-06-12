@@ -1,5 +1,6 @@
-import { siteConfig } from "@/config/site";
-import UserInfo from "@/components/user-info";
+import Experiences from "../components/experiences";
+import UserInfo from "../components/user-info";
+import { siteConfig } from "../config/site";
 
 export const revalidate = 60;
 
@@ -14,8 +15,9 @@ export default function Home() {
       </div>
 
       {/* Experience & Projects */}
-      <div>
+      <div className="col-start-2 py-16">
         {/* Experience */}
+        <Experiences />
 
         {/* Projects */}
       </div>

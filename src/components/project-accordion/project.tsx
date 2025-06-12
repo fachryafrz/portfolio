@@ -7,12 +7,12 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip";
+} from "../_ui/tooltip";
 import { CalendarDays, ExternalLink, Github } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import { Button } from "../ui/button";
+import { Button } from "../_ui/button";
 import Link from "next/link";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import { Projects } from "../../../sanity.types";
