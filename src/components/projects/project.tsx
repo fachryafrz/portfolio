@@ -24,7 +24,7 @@ export default function Project({
   };
 
   return (
-    <div className="group relative -mx-4 flex flex-col gap-4 p-4 transition-all hover:bg-accent/10 hover:!opacity-100 group-hover/projects:opacity-50">
+    <div className="group relative -mx-4 flex flex-col gap-4 p-4 transition-all hover:bg-accent/10 lg:hover:!opacity-100 lg:group-hover/projects:opacity-50">
       <Link
         href={project.url || ""}
         className={cn(

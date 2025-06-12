@@ -7,11 +7,11 @@ export const revalidate = 60;
 
 export default function Home() {
   return (
-    <div className="mx-auto grid min-h-dvh max-w-7xl gap-4 p-4 lg:grid-cols-2">
+    <div className="mx-auto grid min-h-svh max-w-7xl gap-4 p-4 lg:grid-cols-2">
       <h1 className="sr-only">{siteConfig.name}</h1>
 
       {/* Information */}
-      <div className="flex h-dvh items-center pb-16 lg:fixed">
+      <div className="flex h-svh items-center pb-16 lg:fixed">
         <UserInfo />
       </div>
 
