@@ -8,6 +8,7 @@ import { EXPERIENCES_QUERYResult } from "@/sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import ListOfTechnologies from "../list-of-technologies";
+import Markdown from "react-markdown";
 
 export default function Experience({
   exp,
@@ -58,9 +59,14 @@ export default function Experience({
         </div>
 
         {/* Description */}
-        <p className={cn("text-description", readMore ? "" : "line-clamp-3")}>
-          {toMarkdown(exp.description)}
-        </p>
+        <div
+          className={cn(
+            "prose max-w-none text-description",
+            readMore ? "" : "line-clamp-3",
+          )}
+        >
+          <Markdown>{toMarkdown(exp.description)}</Markdown>
+        </div>
 
         {/* Read more */}
         <button
