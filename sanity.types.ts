@@ -181,6 +181,7 @@ export type Projects = {
     _type: "block";
     _key: string;
   }>;
+  shortDescription?: string;
   highlighted?: boolean;
   show?: boolean;
 };
@@ -266,7 +267,7 @@ export type AllSanitySchemaTypes =
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./src/sanity/lib/queries.ts
 // Variable: PROJECTS_QUERY
-// Query: *[_type == "projects" && show == true] {    _id,     date,     description,     "image_path": image_path[].asset->url,     title,     slug,     type,     "technologies": technologies[]->{      title,       "image_path": image_path.asset->url    },     url,    github,    show  } | order(date desc)
+// Query: *[_type == "projects" && show == true] {    _id,     date,     description,     shortDescription,     "image_path": image_path[].asset->url,     title,     slug,     type,     "technologies": technologies[]->{      title,       "image_path": image_path.asset->url    },     url,    github,    show  } | order(date desc)
 export type PROJECTS_QUERYResult = Array<{
   _id: string;
   date: string | null;
@@ -288,6 +289,7 @@ export type PROJECTS_QUERYResult = Array<{
     _type: "block";
     _key: string;
   }> | null;
+  shortDescription: string | null;
   image_path: Array<string | null> | null;
   title: string | null;
   slug: Slug | null;
@@ -301,14 +303,52 @@ export type PROJECTS_QUERYResult = Array<{
   show: boolean | null;
 }>;
 // Variable: EXPERIENCES_QUERY
-// Query: *[_type == "experiences" && show == true] {    _id,    title,    type,    company,    companyUrl,    location,    startDate,    endDate,    isCurrent,    description,    "technologies": technologies[]->{      title,      "image_path": image_path.asset->url    },  } | order(date desc)
-export type EXPERIENCES_QUERYResult = Array<never>;
+// Query: *[_type == "experiences" ] {    _id,    title,    type,    company,    companyUrl,    location,    startDate,    endDate,    isCurrent,    description,    "technologies": technologies[]->{      title,      "image_path": image_path.asset->url    },  } | order(startDate desc)
+export type EXPERIENCES_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  type:
+    | "Contract"
+    | "Freelance"
+    | "Full Time"
+    | "Internship"
+    | "Part Time"
+    | null;
+  company: string | null;
+  companyUrl: string | null;
+  location: string | null;
+  startDate: string | null;
+  endDate: string | null;
+  isCurrent: boolean | null;
+  description: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }> | null;
+  technologies: Array<{
+    title: string | null;
+    image_path: string | null;
+  }> | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    '*[_type == "projects" && show == true] {\n    _id, \n    date, \n    description, \n    "image_path": image_path[].asset->url, \n    title, \n    slug, \n    type, \n    "technologies": technologies[]->{\n      title, \n      "image_path": image_path.asset->url\n    }, \n    url,\n    github,\n    show\n  } | order(date desc)': PROJECTS_QUERYResult;
-    '*[_type == "experiences" && show == true] {\n    _id,\n    title,\n    type,\n    company,\n    companyUrl,\n    location,\n    startDate,\n    endDate,\n    isCurrent,\n    description,\n    "technologies": technologies[]->{\n      title,\n      "image_path": image_path.asset->url\n    },\n  } | order(date desc)': EXPERIENCES_QUERYResult;
+    '*[_type == "projects" && show == true] {\n    _id, \n    date, \n    description, \n    shortDescription, \n    "image_path": image_path[].asset->url, \n    title, \n    slug, \n    type, \n    "technologies": technologies[]->{\n      title, \n      "image_path": image_path.asset->url\n    }, \n    url,\n    github,\n    show\n  } | order(date desc)': PROJECTS_QUERYResult;
+    '*[_type == "experiences" ] {\n    _id,\n    title,\n    type,\n    company,\n    companyUrl,\n    location,\n    startDate,\n    endDate,\n    isCurrent,\n    description,\n    "technologies": technologies[]->{\n      title,\n      "image_path": image_path.asset->url\n    },\n  } | order(startDate desc)': EXPERIENCES_QUERYResult;
   }
 }

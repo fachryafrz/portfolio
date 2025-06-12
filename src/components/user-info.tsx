@@ -98,12 +98,12 @@ export default function UserInfo() {
       </div>
 
       {/* Description */}
-      <p className="max-w-[500px]">
+      <p className="max-w-[495px] text-pretty">
         I&apos;m a{" "}
         <span className="text-accent">
           Web Developer specializing in Front-End
         </span>
-        , based in Jakarta. <br /> Experienced in developing{" "}
+        , based in Jakarta. Experienced in developing{" "}
         <span className="text-accent">
           responsive and interactive web applications
         </span>{" "}

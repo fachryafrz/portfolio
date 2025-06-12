@@ -1,18 +1,21 @@
-import { Experiences as ExperiencesType } from "@/sanity.types";
+import { EXPERIENCES_QUERYResult } from "@/sanity.types";
 import { client } from "../../sanity/lib/client";
 import { EXPERIENCES_QUERY } from "../../sanity/lib/queries";
 import Experience from "./experience";
 
 export default async function Experiences() {
-  const experiences: ExperiencesType[] = await client.fetch(EXPERIENCES_QUERY);
+  const experiences: EXPERIENCES_QUERYResult =
+    await client.fetch(EXPERIENCES_QUERY);
 
   return (
     <section className="space-y-2">
-      <h2 className="font-fira-code font-medium text-accent">Experiences</h2>
+      <h2 className="flex items-center gap-2 font-fira-code font-medium text-accent after:block after:h-[0.5px] after:w-full after:bg-accent">
+        Experiences
+      </h2>
 
       <ul>
         {experiences.map((exp) => (
-          <li key={exp._id}>
+          <li key={exp._id} className="border-b last:border-b-0">
             <Experience exp={exp} />
           </li>
         ))}

@@ -1182,6 +1182,13 @@
         },
         "optional": true
       },
+      "shortDescription": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "highlighted": {
         "type": "objectAttribute",
         "value": {

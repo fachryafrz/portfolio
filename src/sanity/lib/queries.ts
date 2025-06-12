@@ -5,6 +5,7 @@ export const PROJECTS_QUERY =
     _id, 
     date, 
     description, 
+    shortDescription, 
     "image_path": image_path[].asset->url, 
     title, 
     slug, 
