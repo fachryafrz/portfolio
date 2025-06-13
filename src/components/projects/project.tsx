@@ -10,6 +10,9 @@ import ReactMarkdown from "react-markdown";
 import { ArrowUpRight, Github } from "lucide-react";
 import { useImageSlider } from "@/src/zustand/image-slider";
 import ListOfTechnologies from "../list-of-technologies";
+import { useEffect, useState } from "react";
+
+const MAX_DESCRIPTION_LENGTH = 45;
 
 export default function Project({
   project,
@@ -23,6 +26,14 @@ export default function Project({
     setSelectedIndex(imgIndex);
     setOpen(!open);
   };
+
+  const [readMore, setReadMore] = useState(false);
+
+  const shortDescription = toMarkdown(project.shortDescription);
+
+  useEffect(() => {
+    console.log(shortDescription.split(" ").length, project.title);
+  }, [project]);
 
   return (
     <div className="group relative -mx-4 flex flex-col gap-4 p-4 transition-all hover:bg-accent/10 lg:hover:!opacity-100 lg:group-hover/projects:opacity-50">
@@ -65,7 +76,12 @@ export default function Project({
       </span>
 
       {/* Description */}
-      <div className="prose max-w-none text-description">
+      <div
+        className={cn(
+          "prose max-w-none text-description",
+          readMore ? "" : "line-clamp-3",
+        )}
+      >
         <ReactMarkdown
           components={{
             strong: ({ node, ...props }) => (
@@ -73,15 +89,25 @@ export default function Project({
             ),
           }}
         >
-          {toMarkdown(project.shortDescription)}
+          {shortDescription}
         </ReactMarkdown>
       </div>
+
+      {/* Read more */}
+      {shortDescription.split(" ").length > MAX_DESCRIPTION_LENGTH && (
+        <button
+          className="relative z-10 block w-fit text-accent underline-offset-2 hover:underline"
+          onClick={() => setReadMore(!readMore)}
+        >
+          {readMore ? "Show less" : "Read more"}
+        </button>
+      )}
 
       {/* Tech Stack */}
       <ListOfTechnologies technologies={project.technologies} />
 
       {/* Images */}
-      <div className="z-10 grid grid-cols-2 items-center gap-2 @sm:grid-cols-3 @lg:grid-cols-4 @xl:grid-cols-5">
+      <div className="z-10 grid grid-cols-3 items-center gap-2 @lg:grid-cols-4 @xl:grid-cols-5">
         {project.image_path.map((img, imgIndex) => (
           <button
             key={imgIndex}
