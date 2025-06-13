@@ -14,7 +14,10 @@ export default async function Projects() {
 
       <ul className="group/projects">
         {projects.map((project) => (
-          <li key={project._id} className="border-b last:border-b-0">
+          <li
+            key={project._id}
+            className="border-b border-description/30 last:border-b-0"
+          >
             <Project project={project} />
           </li>
         ))}

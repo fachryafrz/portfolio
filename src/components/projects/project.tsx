@@ -81,12 +81,12 @@ export default function Project({
       <ListOfTechnologies technologies={project.technologies} />
 
       {/* Images */}
-      <div className="z-10 flex flex-wrap items-center gap-2">
+      <div className="z-10 grid grid-cols-2 items-center gap-2 @sm:grid-cols-3 @lg:grid-cols-4 @xl:grid-cols-5">
         {project.image_path.map((img, imgIndex) => (
           <button
             key={imgIndex}
             onClick={() => handleSetImagesSlider(imgIndex)}
-            className="aspect-[4/3] max-w-[100px] overflow-hidden rounded-lg transition-transform hover:scale-105"
+            className="aspect-[4/3] overflow-hidden rounded-lg transition-transform hover:scale-105"
           >
             <img
               src={img}
