@@ -5,6 +5,13 @@ import { siteConfig } from "@/src/config/site";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import ImageSlider from "@/src/components/image-slider";
+import { Inter } from "next/font/google";
+import { cn } from "../lib/utils";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -40,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-tnr antialiased`}>
+      <body className={cn("antialiased", inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

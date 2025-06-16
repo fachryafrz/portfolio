@@ -101,7 +101,7 @@ export default function UserInfo() {
       </div>
 
       {/* Description */}
-      <div className="max-w-[495px] text-pretty">
+      <div className="max-w-[495px] text-pretty text-sm">
         <Markdown
           components={{
             strong: ({ node, ...props }) => (

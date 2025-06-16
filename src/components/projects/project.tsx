@@ -12,7 +12,7 @@ import { useImageSlider } from "@/src/zustand/image-slider";
 import ListOfTechnologies from "../list-of-technologies";
 import { useEffect, useState } from "react";
 
-const MAX_DESCRIPTION_LENGTH = 45;
+const MAX_DESCRIPTION_LENGTH = 50;
 
 export default function Project({
   project,
@@ -49,7 +49,7 @@ export default function Project({
 
       {/* Name & Type */}
       <div className="flex items-center">
-        <h3 className="grow text-lg">{`${project.title} · ${project.type}`}</h3>
+        <h3 className="grow">{`${project.title} · ${project.type}`}</h3>
 
         {project.github && (
           <Link
@@ -71,15 +71,19 @@ export default function Project({
       </div>
 
       {/* Date */}
-      <span className="text-accent">
+      <span className="text-sm text-accent">
         {dayjs(project.date).format("MMMM DD, YYYY")}
       </span>
 
       {/* Description */}
       <div
         className={cn(
-          "prose max-w-none text-description",
-          readMore ? "" : "line-clamp-3",
+          "prose max-w-none text-sm text-description",
+          readMore
+            ? ""
+            : shortDescription.split(" ").length > MAX_DESCRIPTION_LENGTH
+              ? "line-clamp-3"
+              : "",
         )}
       >
         <ReactMarkdown
@@ -96,7 +100,7 @@ export default function Project({
       {/* Read more */}
       {shortDescription.split(" ").length > MAX_DESCRIPTION_LENGTH && (
         <button
-          className="relative z-10 block w-fit text-accent underline-offset-2 hover:underline"
+          className="relative z-10 block w-fit text-sm text-accent underline-offset-2 hover:underline"
           onClick={() => setReadMore(!readMore)}
         >
           {readMore ? "Show less" : "Read more"}

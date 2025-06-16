@@ -30,7 +30,7 @@ export default function Experience({
       ></Link>
 
       {/* Date & Location */}
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 text-sm">
         {/* Date */}
         <span className="whitespace-nowrap text-accent">{`${dayjs(exp.startDate).format("MMM YYYY")} - ${
           exp.endDate ? dayjs(exp.endDate).format("MMM YYYY") : "Present"
@@ -48,7 +48,7 @@ export default function Experience({
       <div className="col-span-3 space-y-2">
         {/* Role & Type */}
         <div className="flex items-center justify-between">
-          <h3 className="text-lg">{`${exp.title} · ${exp.type}`}</h3>
+          <h3>{`${exp.title} · ${exp.type}`}</h3>
 
           {exp.companyUrl && (
             <ArrowUpRight
@@ -61,7 +61,7 @@ export default function Experience({
         {/* Description */}
         <div
           className={cn(
-            "prose max-w-none text-description",
+            "prose max-w-none text-sm text-description",
             readMore ? "" : "line-clamp-3",
           )}
         >
@@ -70,7 +70,7 @@ export default function Experience({
 
         {/* Read more */}
         <button
-          className="relative z-10 block text-accent underline-offset-2 hover:underline"
+          className="relative z-10 block text-sm text-accent underline-offset-2 hover:underline"
           onClick={() => setReadMore(!readMore)}
         >
           {readMore ? "Show less" : "Read more"}
