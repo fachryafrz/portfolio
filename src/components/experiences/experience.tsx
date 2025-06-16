@@ -3,20 +3,18 @@
 import { cn } from "@/src/lib/utils";
 import { ArrowUpRight, Building2, MapPin } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 import { EXPERIENCES_QUERYResult } from "@/sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import ListOfTechnologies from "../list-of-technologies";
 import Markdown from "react-markdown";
+import Description from "../description";
 
 export default function Experience({
   exp,
 }: {
   exp: EXPERIENCES_QUERYResult[number];
 }) {
-  const [readMore, setReadMore] = useState(false);
-
   return (
     <div className="group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 @xl:grid-cols-4 lg:hover:!opacity-100 lg:group-hover/experiences:opacity-50">
       <Link
@@ -59,22 +57,7 @@ export default function Experience({
         </div>
 
         {/* Description */}
-        <div
-          className={cn(
-            "prose max-w-none text-sm text-description",
-            readMore ? "" : "line-clamp-3",
-          )}
-        >
-          <Markdown>{toMarkdown(exp.description)}</Markdown>
-        </div>
-
-        {/* Read more */}
-        <button
-          className="relative z-10 block text-sm text-accent underline-offset-2 hover:underline"
-          onClick={() => setReadMore(!readMore)}
-        >
-          {readMore ? "Show less" : "Read more"}
-        </button>
+        <Description text={toMarkdown(exp.description)} />
 
         {/* Tech Stack */}
         {exp.technologies?.length > 0 && (
