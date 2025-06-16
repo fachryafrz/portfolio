@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "fachryafrz",
     short_name: "fachryafrz",
-    description: "Personal Portfolio Website of Fachrya Dwi Afriza.",
+    description: "Personal Portfolio Website of Fachry Dwi Afriza.",
     icons: [
       {
         src: "/maskable/maskable_icon_x512.png",
