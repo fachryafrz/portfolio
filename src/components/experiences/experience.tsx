@@ -7,7 +7,6 @@ import { EXPERIENCES_QUERYResult } from "@/sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import ListOfTechnologies from "../list-of-technologies";
-import Markdown from "react-markdown";
 import Description from "../description";
 
 export default function Experience({
