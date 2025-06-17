@@ -37,7 +37,7 @@ export default function Description({ text }: { text: string }) {
       {/* Read more */}
       {text.split(" ").length > MAX_DESCRIPTION_LENGTH && (
         <button
-          className="text-accent relative z-10 block w-fit text-sm underline-offset-2 hover:underline"
+          className="text-accent relative z-10 block w-fit cursor-pointer text-sm underline-offset-2 hover:underline"
           onClick={() => setReadMore(!readMore)}
         >
           {readMore ? "Show less" : "Read more"}
