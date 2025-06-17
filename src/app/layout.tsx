@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@/src/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import SmoothScroll from "@/src/components/smooth-scroll";
-import { siteConfig } from "@/src/config/site";
+import SmoothScroll from "@/components/smooth-scroll";
+import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import ImageSlider from "@/src/components/image-slider";
+import ImageSlider from "@/components/image-slider";
 import { Inter } from "next/font/google";
 import { cn } from "../lib/utils";
 

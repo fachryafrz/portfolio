@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import { ArrowUpRight, Building2, MapPin } from "lucide-react";
 import Link from "next/link";
-import { EXPERIENCES_QUERYResult } from "@/sanity.types";
+import { EXPERIENCES_QUERYResult } from "../../../sanity.types";
 import dayjs from "dayjs";
 import toMarkdown from "@sanity/block-content-to-markdown";
 import ListOfTechnologies from "../list-of-technologies";
@@ -15,7 +15,7 @@ export default function Experience({
   exp: EXPERIENCES_QUERYResult[number];
 }) {
   return (
-    <div className="group relative -mx-4 grid gap-4 p-4 transition-all hover:bg-accent/10 @xl:grid-cols-4 lg:hover:!opacity-100 lg:group-hover/experiences:opacity-50">
+    <div className="group hover:bg-accent/10 relative -mx-4 grid gap-4 p-4 transition-all lg:group-hover/experiences:opacity-50 lg:hover:!opacity-100 @xl:grid-cols-4">
       <Link
         href={exp.companyUrl || ""}
         className={cn(
@@ -29,12 +29,12 @@ export default function Experience({
       {/* Date & Location */}
       <div className="flex flex-col space-y-2 text-sm">
         {/* Date */}
-        <span className="whitespace-nowrap text-accent">{`${dayjs(exp.startDate).format("MMM YYYY")} - ${
+        <span className="text-accent whitespace-nowrap">{`${dayjs(exp.startDate).format("MMM YYYY")} - ${
           exp.endDate ? dayjs(exp.endDate).format("MMM YYYY") : "Present"
         }`}</span>
 
         {/* Location */}
-        <div className="flex items-center gap-2 text-description">
+        <div className="text-description flex items-center gap-2">
           {exp.company ? <Building2 size={16} /> : <MapPin size={16} />}
 
           <span>{exp.company || exp.location}</span>
@@ -50,7 +50,7 @@ export default function Experience({
           {exp.companyUrl && (
             <ArrowUpRight
               size={16}
-              className="pointer-events-none opacity-0 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:opacity-100"
+              className="pointer-events-none opacity-0 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
             />
           )}
         </div>
@@ -59,8 +59,8 @@ export default function Experience({
         <Description text={toMarkdown(exp.description)} />
 
         {/* Tech Stack */}
-        {exp.technologies?.length > 0 && (
-          <ListOfTechnologies technologies={exp.technologies} />
+        {(exp.technologies?.length ?? 0) > 0 && (
+          <ListOfTechnologies technologies={exp.technologies ?? []} />
         )}
       </div>
     </div>

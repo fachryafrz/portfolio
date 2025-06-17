@@ -3,19 +3,28 @@
 export default function ListOfTechnologies({
   technologies,
 }: {
-  technologies: {
-    title: string;
-    image_path: string;
-  }[];
+  technologies:
+    | {
+        title: string | null;
+        image_path: string | null;
+      }[]
+    | null;
 }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {technologies.map((tech) => (
+      {technologies?.map((tech) => (
         <div
           key={tech.title}
-          className="flex w-fit items-center gap-2 rounded-lg bg-accent/10 p-2 text-sm text-accent"
+          className="bg-accent/10 text-accent flex w-fit items-center gap-2 rounded-lg p-2 text-sm"
         >
-          <img src={tech.image_path} alt="" className="w-6" draggable={false} />
+          {tech.image_path && (
+            <img
+              src={tech.image_path}
+              alt=""
+              className="w-6"
+              draggable={false}
+            />
+          )}
           <span>{tech.title}</span>
         </div>
       ))}

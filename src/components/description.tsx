@@ -14,7 +14,7 @@ export default function Description({ text }: { text: string }) {
       {/* Description */}
       <div
         className={cn(
-          "prose max-w-none text-sm text-description",
+          "prose text-description max-w-none text-sm",
           readMore
             ? ""
             : text.split(" ").length > MAX_DESCRIPTION_LENGTH
@@ -24,8 +24,9 @@ export default function Description({ text }: { text: string }) {
       >
         <Markdown
           components={{
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             strong: ({ node, ...props }) => (
-              <strong className="font-normal text-accent" {...props} />
+              <strong className="text-accent font-normal" {...props} />
             ),
           }}
         >
@@ -36,7 +37,7 @@ export default function Description({ text }: { text: string }) {
       {/* Read more */}
       {text.split(" ").length > MAX_DESCRIPTION_LENGTH && (
         <button
-          className="relative z-10 block w-fit text-sm text-accent underline-offset-2 hover:underline"
+          className="text-accent relative z-10 block w-fit text-sm underline-offset-2 hover:underline"
           onClick={() => setReadMore(!readMore)}
         >
           {readMore ? "Show less" : "Read more"}

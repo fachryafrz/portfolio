@@ -32,7 +32,7 @@ export default function UserInfo() {
   return (
     <section className="flex flex-col gap-4">
       <div
-        className={`min-h-[48px] gap-2 font-tnr text-4xl font-bold sm:text-5xl sm:tracking-wide`}
+        className={`font-tnr min-h-[48px] gap-2 text-4xl font-bold sm:text-5xl sm:tracking-wide`}
       >
         <Typewriter
           onInit={(typewriter) => {
@@ -49,7 +49,7 @@ export default function UserInfo() {
         />
       </div>
 
-      <div className={`min-h-[24px] font-fira-code font-medium text-accent`}>
+      <div className={`font-fira-code text-accent min-h-[24px] font-medium`}>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -75,14 +75,14 @@ export default function UserInfo() {
           }
           target={`_blank`}
           aria-label={"Check out my resume"}
-          className={`group flex w-fit items-center gap-2 rounded-lg border border-white p-2 transition-all hover:border-accent hover:text-accent`}
+          className={`group hover:border-accent hover:text-accent flex w-fit items-center gap-2 rounded-lg border border-white p-2 transition-all`}
           rel="noopener noreferrer"
         >
           <FileText size={16} />
           <span className="font-fira-code">Resume</span>
           <ArrowUpRight
             size={16}
-            className="transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            className="transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           />
         </Link>
 
@@ -92,7 +92,7 @@ export default function UserInfo() {
             href={social.url}
             target={`_blank`}
             aria-label={social.ariaLabel}
-            className={`transition-all hover:text-accent`}
+            className={`hover:text-accent transition-all`}
             rel="noopener noreferrer"
           >
             {social.icon}
@@ -101,11 +101,12 @@ export default function UserInfo() {
       </div>
 
       {/* Description */}
-      <div className="max-w-[495px] text-pretty text-sm">
+      <div className="max-w-[495px] text-sm text-pretty">
         <Markdown
           components={{
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             strong: ({ node, ...props }) => (
-              <strong className="font-normal text-accent" {...props} />
+              <strong className="text-accent font-normal" {...props} />
             ),
           }}
         >

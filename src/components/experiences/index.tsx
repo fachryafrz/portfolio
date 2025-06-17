@@ -1,4 +1,4 @@
-import { EXPERIENCES_QUERYResult } from "@/sanity.types";
+import { EXPERIENCES_QUERYResult } from "../../../sanity.types";
 import { client } from "../../sanity/lib/client";
 import { EXPERIENCES_QUERY } from "../../sanity/lib/queries";
 import Experience from "./experience";
@@ -9,7 +9,7 @@ export default async function Experiences() {
 
   return (
     <section className="space-y-2">
-      <h2 className="flex items-center gap-2 font-fira-code font-medium text-accent after:block after:h-[0.5px] after:w-full after:bg-accent">
+      <h2 className="font-fira-code text-accent after:bg-accent flex items-center gap-2 font-medium after:block after:h-[0.5px] after:w-full">
         Experiences
       </h2>
 
@@ -17,7 +17,7 @@ export default async function Experiences() {
         {experiences.map((exp) => (
           <li
             key={exp._id}
-            className="border-b border-description/30 last:border-b-0"
+            className="border-description/30 border-b last:border-b-0"
           >
             <Experience exp={exp} />
           </li>

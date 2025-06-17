@@ -1,6 +1,6 @@
 "use client";
 
-import { useImageSlider } from "@/src/zustand/image-slider";
+import { useImageSlider } from "@/zustand/image-slider";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
@@ -15,9 +15,9 @@ export default function ImageSlider() {
       slides={images?.map((img) => ({ src: img }))}
       index={selectedIndex}
       plugins={[Zoom]}
-      carousel={{ 
-        finite: true
-       }}
+      carousel={{
+        finite: true,
+      }}
     />
   );
 }
